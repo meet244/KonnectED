@@ -74,30 +74,40 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="card">
+        <div class="card" id="infoSection">
             <img class="profile-img" src="user.jpg" alt="" />
             <div class="profile-info">
                 <h1 class="profile-title" style="font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; font-weight: bold; text-shadow: 3px 3px 5px rgba(0.5, 0.5, 0.5, 1);">John Doe</h1>
                 <h2 class="profile-name" style="color: white; font-weight: bold; font-size: 15px;">Senior Manager</h2>
             </div>
         </div>
-        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var videoContainer = document.getElementById('videoContainer');
+            var infoSection = document.getElementById('infoSection');
             var videoIndex = 0; // Initial video index
-            var videos = ['video.mp4', 'video1.mp4', 'video2.mp4']; // List of video sources
+            var videos = ['Array.mp4', 'Binary Search.mp4', 'Graphs.mp4', 'Heap.mp4', 'Linked List.mp4', 'Queue.mp4', 'Stack.mp4']; // List of video sources
+            var infoData = [
+                { name: 'Mike Johnson', title: 'Senior Manager' },
+                { name: 'Jane Smith', title: 'Software Engineer' },
+                { name: 'John Doe', title: 'Product Designer' },                
+                { name: 'Meet Patel', title: 'Marketing Specialist' },
+                { name: 'Heer Meta', title: 'Financial Analyst' },
+                { name: 'Danush Nadar', title: 'Graphic Designer' },
+                { name: 'Viir Phuria', title: 'Project Manager' }
+            ]; // List of info data
 
-            // Function to change the video when scrolling up or down
-            function changeVideo(event) {
+            // Function to change the video and info when scrolling up or down
+            function changeVideoAndInfo(event) {
                 var delta = Math.sign(event.deltaY); // Get the scroll direction: -1 for up, 1 for down
 
                 if (delta === 1) {
-                    // Scroll down: move to the next video
+                    // Scroll down: move to the next video and info
                     videoIndex = (videoIndex + 1) % videos.length;
                 } else {
-                    // Scroll up: move to the previous video
+                    // Scroll up: move to the previous video and info
                     videoIndex = (videoIndex - 1 + videos.length) % videos.length;
                 }
 
@@ -105,11 +115,17 @@
                 var video = videoContainer.querySelector('video');
                 video.src = videos[videoIndex];
                 video.play();
+
+                // Update info data
+                var info = infoSection.querySelector('.profile-info');
+                info.querySelector('.profile-title').textContent = infoData[videoIndex].name;
+                info.querySelector('.profile-name').textContent = infoData[videoIndex].title;
             }
 
-            // Listen for wheel events and trigger video change accordingly
-            videoContainer.addEventListener('wheel', changeVideo);
+            // Listen for wheel events and trigger video and info change accordingly
+            videoContainer.addEventListener('wheel', changeVideoAndInfo);
         });
     </script>
 </body>
+
 </html>
