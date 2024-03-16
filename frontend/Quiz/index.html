@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Screen</title>
+    <link rel="stylesheet" href="frontend/Quiz/style.css">
+    <!-- FontAwesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- Video Section -->
+        <div class="video-container" id="videoContainer">
+            <video class="video" autoplay loop muted playsinline>
+                <source type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+            <div class="card">
+                <img class="profile-img" src="person.avif" alt="" />
+                <h3 class="profile-name">Lori Stevens</h3>
+                <h3
+                    style="font-size: 12px; display: flex; position: absolute; left: 5%; bottom: 10%; align-items: center; justify-content: center;">
+                    Senior Manager</h3>
+            </div>
+
+        <div class="info_box">
+            <i class="fa-solid fa-lock" style="position: absolute; right: 0; margin-right: 10px; margin-top: 10px;"></i>
+            <div class="info-title"><span>Some Rules of this Quiz</span></div>
+            <div class="info-list">
+                <div class="info">1. You will have only <span>15 seconds</span> per question.</div>
+                <div class="info">2. Once you select your answer, it can't be undone.</div>
+                <div class="info">3. You can't select any option once the timer goes off.</div>
+                <div class="info">4. You can't exit from the Quiz while you're attempting.</div>
+                <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Exit Quiz</button>
+                <button class="restart">Continue</button>
+            </div>
+        </div>
+        <!-- Quiz Box -->
+        <div class="quiz_box">
+            <header>
+                <div class="title">Arrays Quiz</div>
+                <div class="timer">
+                    <div class="time_left_txt">Time Left</div>
+                    <div class="timer_sec">15</div>
+                </div>
+                <div class="time_line"></div>
+            </header>
+            <section>
+                <div class="que_text">
+                    <!-- Here I've inserted question from JavaScript -->
+                </div>
+                <div class="option_list">
+                    <!-- Here I've inserted options from JavaScript -->
+                </div>
+            </section>
+            <!-- footer of Quiz Box -->
+            <footer>
+                <div class="total_que">
+                    <!-- Here I've inserted Question Count Number from JavaScript -->
+                </div>
+                <button class="next_btn">Next</button>
+            </footer>
+        </div>
+        <!-- Result Box -->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text">You've completed the Quiz!</div>
+            <div class="score_text">
+                <!-- Here I've inserted Score Result from JavaScript -->
+            </div>
+            <div class="buttons">
+                <button class="restart">Restart Quiz</button>
+                <button class="quit">Quit Quiz</button>
+            </div>
+        </div>
+    </div>
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="frontend/Quiz/script.js"></script>
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <!-- <script class="change" ></script> -->
+</body>
+
+</html>
