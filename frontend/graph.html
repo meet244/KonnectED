@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaderboard Graph</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 0;
+  }
+
+  #chartdiv {  
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    overflow: hidden; /* Hide overflow */
+  }
+
+  .chart-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333333; /* Dark text */
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #666666; /* Medium gray text */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .legend-item:hover {
+    color: #333333; /* Dark text on hover */
+  }
+
+  .amcharts-balloon {
+    font-size: 14px;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text */
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .amcharts-scrollbar-thumb {
+    fill: #333333; /* Dark scroll thumb */
+  }
+
+  .amcharts-export-menu-item {
+    fill: #007bff !important; /* Blue color for the export menu button */
+  }
+</style>
+</head>
+<body>
+<div id="chartdiv"></div>
+
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/lang/en_US.js"></script>
+<script>
+  // Define chart data
+  var chartData = [
+    {
+      "date": "2024-03-01",
+      "weeklyPoints": 1000,
+      "studiedTime": 510, // increased study time by 70%
+      "quizzesSolved": 25 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-03-08",
+      "weeklyPoints": 1200,
+      "studiedTime": 544, // increased study time by 70%
+      "quizzesSolved": 30 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-03-15",
+      "weeklyPoints": 1500,
+      "studiedTime": 595, // increased study time by 70%
+      "quizzesSolved": 34 // increased quizzes solved by 70%
+    },
+    // Add more data entries for each week
+    {
+      "date": "2024-03-22",
+      "weeklyPoints": 1800,
+      "studiedTime": 683, // increased study time by 70%
+      "quizzesSolved": 38 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-03-29",
+      "weeklyPoints": 2000,
+      "studiedTime": 765, // increased study time by 70%
+      "quizzesSolved": 43 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-04-05",
+      "weeklyPoints": 2200,
+      "studiedTime": 850, // increased study time by 70%
+      "quizzesSolved": 47 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-04-12",
+      "weeklyPoints": 2500,
+      "studiedTime": 935, // increased study time by 70%
+      "quizzesSolved": 51 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-04-19",
+      "weeklyPoints": 2800,
+      "studiedTime": 1020, // increased study time by 70%
+      "quizzesSolved": 55 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-04-26",
+      "weeklyPoints": 3100,
+      "studiedTime": 1105, // increased study time by 70%
+      "quizzesSolved": 59 // increased quizzes solved by 70%
+    },
+    {
+      "date": "2024-05-03",
+      "weeklyPoints": 3500,
+      "studiedTime": 1190, // increased study time by 70%
+      "quizzesSolved": 64 // increased quizzes solved by 70%
+    }
+  ];
+
+  // Create the chart instance
+  var chart = am4core.create("chartdiv", am4charts.XYChart);
+  chart.paddingRight = 20;
+
+  // Add data
+  chart.data = chartData;
+
+  // Create axes
+  var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  dateAxis.renderer.grid.template.location = 0;
+  dateAxis.renderer.minGridDistance = 50;
+  dateAxis.title.text = "Date";
+
+  var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.title.text = "Points/Studied Time/Quizzes Solved";
+
+  // Create series
+  function createSeries(field, name) {
+    var series = chart.series.push(new am4charts.LineSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.dateX = "date";
+    series.name = name;
+    series.tooltipText = "{name}: [bold]{valueY}[/]";
+    series.strokeWidth = 4; // Increase stroke width for a steep graph
+
+    var bullet = series.bullets.push(new am4charts.CircleBullet());
+    bullet.circle.stroke = am4core.color("#fff");
+    bullet.circle.strokeWidth = 4;
+
+    return series;
+  }
+
+  createSeries("weeklyPoints", "Weekly Points");
+  createSeries("studiedTime", "Studied Time (minutes)");
+  createSeries("quizzesSolved", "Quizzes Solved");
+
+  // Add legend
+  chart.legend = new am4charts.Legend();
+  chart.legend.position = "top";
+  chart.legend.labels.template.text = "[bold {color}]{name}[/]";
+
+  // Add cursor
+  chart.cursor = new am4charts.XYCursor();
+
+  // Add scrollbar
+
+  // Add export menu
+  chart.exporting.menu = new am4core.ExportMenu();
+
+  // Add responsive settings
+  chart.responsive.enabled = true;
+  chart.responsive.useDefault = false;
+</script>
+</body>
+</html>
