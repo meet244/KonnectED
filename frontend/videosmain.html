@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from social.webestica.com/index-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jul 2022 07:42:47 GMT -->
+<head>
+	<title>Social - Network, Community and Event Theme</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Bootstrap 5 based Social Media Network and Community Theme">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/OverlayScrollbars-master/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/dist/tiny-slider.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/plyr/plyr.css" />
+ 
+  <!-- Theme CSS -->
+	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+  body {
+    background-color: #f4f4f4; /* Light gray background for the whole page */
+    margin: 0;
+    padding: 0;
+  }
+
+  .chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px; /* Add some space from the top */
+  }
+
+  .chip {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: #fff; /* White chip background */
+    color: #000; /* Black text color */
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    border: 2px solid transparent; /* Transparent border initially */
+  }
+
+  .chip:hover {
+    border-color: #87ceeb; /* Light blue border color on hover */
+  }
+
+  .chip.active {
+    background-color: #87ceeb; /* Light blue color when selected */
+    border-color: #87ceeb; /* Light blue border color when selected */
+  }
+
+  .chip i {
+    margin-right: 8px;
+  }
+
+  .close-icon {
+    display: none;
+    margin-left: 8px;
+    color: #fff; /* White close icon color */
+    cursor: pointer;
+  }
+
+  .chip.active .close-icon {
+    display: block;
+  }
+
+  .close-icon:hover {
+    color: #000; /* Black close icon color on hover */
+  }
+</style>
+
+</head>
+
+<body>
+
+<!-- **************** MAIN CONTENT START **************** -->
+
+  <!-- =======================
+  Header START -->
+  <header class="navbar-light fixed-top header-static bg-mode">
+
+    <!-- Logo Nav START -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Logo START -->
+        <a class="navbar-brand" href="index.html">
+          <img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
+				  <img class="dark-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">		
+        </a>
+        <!-- Logo END -->
+
+        <button class="icon-md btn btn-light p-0 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarVerticaloffcanvas" aria-controls="navbarVerticaloffcanvas">
+          <i class="bi bi-justify-left fs-4"></i>
+        </button>
+
+        <!-- Responsive navbar toggler -->
+        <button class="navbar-toggler ms-auto icon-md btn btn-light p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-animation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+        <!-- Main navbar START -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Nav Search START -->
+          <div class="nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+            <div class="nav-item w-100">
+              <form class="rounded position-relative">
+                <input class="form-control ps-5 bg-light" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="submit"><i class="bi bi-search fs-5"> </i></button>
+              </form>
+            </div>
+          </div>
+          <!-- Nav Search END -->
+
+          <ul class="navbar-nav navbar-nav-scroll mx-auto">
+            <!-- Nav item 1 Demos -->
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Video Library</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">My Profile</a>
+            </li>
+            <!-- Nav item 2 Pages -->
+          </ul>
+        </div>
+        <!-- Main navbar END -->
+
+        <!-- Nav right START -->
+        <ul class="nav flex-nowrap align-items-center ms-lg-3 list-unstyled">
+          <li class="nav-item ms-2">
+            <a class="nav-link icon-md btn p-0" href="settings.html">
+              <i class="bi bi-gear-fill fs-6"> </i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link icon-md btn p-0" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+              <i class="bi bi-bell-fill fs-6"> </i>
+            </a>
+            <div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0" aria-labelledby="notifDropdown">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">2 new</span></h6>
+                  <a class="small" href="#">Clear all</a>
+                </div>
+                <div class="card-body p-0">
+                  <ul class="list-group list-group-flush list-unstyled p-2">
+                  
+                    <!-- Notif item -->
+                   
+                    <!-- Notif item -->
+                    <li>
+                      <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+                        <div class="avatar text-center d-none d-sm-inline-block">
+                          <div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span></div>
+                        </div>
+                        <div class="ms-sm-3">
+                          <div class="d-flex">
+                            <p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+                            <p class="small ms-3">1hr</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- Notif item -->
+                    <li>
+                      <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                        <div class="avatar text-center d-none d-sm-inline-block">
+                          <img class="avatar-img rounded-circle" src="assets/images/logo/12.svg" alt="">
+                        </div>
+                        <div class="ms-sm-3 d-flex">
+                          <p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s parent company, Alphabet, just joined an exclusive club of tech stocks.</p>
+                          <p class="small ms-3">4hr</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- Notification dropdown END -->
+
+          <li class="nav-item ms-3 dropdown">
+            <a class="nav-link p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex align-items-center position-relative">
+                <!-- Avatar -->
+                <div class="avatar avatar-sm me-xl-3">
+                  <img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+                </div>
+                <div class="d-none d-xl-block">
+                  <span class="h6 stretched-link">Jay Patel</span>
+                  <p class="small m-0">Web Developer</p>
+                </div>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-animation dropdown-menu-end pt-3 small me-md-n3" aria-labelledby="profileDropdown">
+              <!-- Links -->
+             
+              
+              <li><a class="dropdown-item bg-danger-soft-hover" href="home.html"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+              <li> <hr class="dropdown-divider"></li>
+              <!-- Dark mode switch START -->
+              <li>
+                <div class="modeswitch-wrap" id="darkModeSwitch">
+                  <div class="modeswitch-item">
+                    <div class="modeswitch-icon"></div>
+                  </div>
+                  <span>Dark mode</span>
+                </div>
+              </li> 
+              <!-- Dark mode switch END -->
+            </ul>
+          </li>
+          <!-- Profile START -->
+          
+        </ul>
+        <!-- Nav right END -->
+      </div>
+    </nav>
+    <!-- Logo Nav END -->
+  </header>
+  <!-- =======================
+  Header END -->
+  
+  <main> 
+
+  <!-- Container START -->
+  <div class="container-fluid">
+
+    <!-- Sidenav START -->
+    <div class="navbar navbar-vertical navbar-light">
+      <div class="offcanvas offcanvas-start custom-scrollbar rounded pt-3" tabindex="-1" id="navbarVerticaloffcanvas">
+        <div class="offcanvas-body pt-5 pt-lg-0">
+          <!-- Card START -->
+          
+            <!-- Avatar -->
+            <div class="avatar avatar-lg mb-3">
+              <a href="#!"><img class="avatar-img rounded-circle border border-white border-3" src="assets/images/avatar/07.jpg" alt=""></a>
+            </div>
+            <!-- Info -->
+            <h5 class="mb-0"> <a href="#!">Jay Patel</a> </h5>
+            <small>Web Developer at Google</small>
+            <!-- User stat START -->
+         
+            <!-- User stat END -->
+
+            <!-- Divider -->
+            <hr>
+
+            <!-- Side Nav START -->
+            <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#!"> <a class="nav-link active" href="#"><img class="me-2 h-20px fa-fw" src="assets/images/icon/arrow-boxed-outline-filled.svg" alt=""><span>Feed </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> <img class="me-2 h-20px fa-fw" src="assets/images/icon/clock-outline-filled.svg" alt=""><span>History </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> <img class="me-2 h-20px fa-fw" src="assets/images/icon/home-outline-filled.svg" alt=""><span>My Profile </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="settings.html"> <img class="me-2 h-20px fa-fw" src="assets/images/icon/cog-outline-filled.svg" alt=""><span>Settings </span></a>
+              </li>
+            </ul>
+            <!-- Side Nav END -->
+          </div>
+        </div>
+      </div>
+      <!-- Sidenav END -->
+
+      <!-- Main content START -->
+      <div class="page-content">
+        <div class="row mb-4">
+          <div class="col-12">
+            <!-- Video main feed -->
+            <div class="rounded py-4 py-sm-5 overflow-hidden position-relative" style="background-image:url(assets/images/post/16by9/big/02.png); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+              <div class="bg-overlay bg-dark opacity-5"></div>
+              <div class="p-4 p-sm-5 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-xxs me-2">
+                    <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="">
+                  </div>
+                  <!-- Avatar name -->
+                  <h6 class="mb-0"> <a class="text-white" href="#!"> Aman Dhattarwala </a> </h6>
+                  <span class="ms-1 ms-sm-3 small text-white"> 5M views</span>
+                </div>
+                <h1 class="text-white">How does the Binary Tree work?</h1>
+                <a class="btn btn-primary stretched-link" href="video-details.html"> <i class="bi bi-file-earmark-play pe-1"></i>Watch now</a>
+              </div>
+            </div>
+            <!-- Video main END -->
+          </div>
+        </div>
+        <div class="row g-3 mb-4">
+          <div class="col-12 mt-4">
+            <div class="d-sm-flex justify-content-between align-items-center">
+              
+             
+              <div class="chip-container">
+                <div class="chip" onclick="toggleActive(event)">
+                  <i class="fas fa-database"></i>Array
+                  <i class="fas fa-times close-icon" onclick="unselectChip(event)"></i>
+                </div>
+                <div class="chip" onclick="toggleActive(event)">
+                  <i class="fas fa-link"></i>Linked List
+                  <i class="fas fa-times close-icon" onclick="unselectChip(event)"></i>
+                </div>
+                <div class="chip" onclick="toggleActive(event)">
+                  <i class="fas fa-cubes"></i>Stack
+                  <i class="fas fa-times close-icon" onclick="unselectChip(event)"></i>
+                </div>
+                <div class="chip" onclick="toggleActive(event)">
+                  <i class="fas fa-list"></i>Queue
+                  <i class="fas fa-times close-icon" onclick="unselectChip(event)"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tiny-slider arrow-hover overflow-hidden">
+            <div class="tiny-slider-inner ms-n4" data-arrow="true" data-dots="true" data-loop="false" data-autoplay="false" data-items-xl="4" data-items-lg="3" data-items-md="3" data-items-sm="3" data-items-xs="2" data-gutter="12" data-edge="30">
+                <!-- Slider items -->
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/02.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Judy Nguyen</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/03.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Samuel Bishop</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/04.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Carolyn Ortiz</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/05.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Amanda Reed</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/01.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Lori Stevens</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+            </div>
+        </div>
+        <h5 class="mb-md-0">🔥Trending </h5>
+        <div class="tiny-slider arrow-hover overflow-hidden">
+            <div class="tiny-slider-inner ms-n4" data-arrow="true" data-dots="true" data-loop="false" data-autoplay="false" data-items-xl="4" data-items-lg="3" data-items-md="3" data-items-sm="3" data-items-xs="2" data-gutter="12" data-edge="30">
+                <!-- Slider items -->
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/02.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Judy Nguyen</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/03.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Samuel Bishop</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/04.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Carolyn Ortiz</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/05.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Amanda Reed</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+                <!-- Slider items -->
+                <div>
+                    <!-- Card START -->
+                    <div
+                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                        style="
+                        background-image: url(assets/images/post/1by1/01.jpg);
+                        background-position: center left;
+                        background-size: cover;
+                        "
+                        >
+                        <div class="card-img-overlay d-flex align-items-center p-2">
+                            <div class="w-100 mt-auto">
+                                <!-- Name -->
+                                <a href="#!" class="stretched-link text-white small"
+                                    >Lori Stevens</a
+                                    >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card END -->
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Official trailer END -->
+
+       
+
+     
+      </div>
+      <!-- Main content END -->
+
+  </div>
+  <!-- Container END -->
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+JS libraries, plugins and custom scripts -->
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Vendors -->
+<script src="assets/vendor/tiny-slider/dist/tiny-slider.js"></script>
+<script src="assets/vendor/OverlayScrollbars-master/js/OverlayScrollbars.min.js"></script>
+<script src="assets/vendor/plyr/plyr.js"></script>
+<script src="assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+
+<!-- Template Functions -->
+<script src="assets/js/functions.js"></script>
+<script>
+    function toggleActive(event) {
+      const chip = event.target.closest('.chip');
+      chip.classList.toggle('active');
+    }
+  
+    function unselectChip(event) {
+      event.stopPropagation(); // Prevent parent onclick event from firing
+      const chip = event.target.closest('.chip');
+      chip.classList.remove('active');
+    }
+  </script>
+  
+</body>
+
+<!-- Mirrored from social.webestica.com/index-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jul 2022 07:42:58 GMT -->
+</html>
