@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,132 +11,102 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
+            /* Prevent scrolling */
         }
+
         .container {
             position: relative;
             display: flex;
-            height: 100vh; /* Full height of the viewport */
+            height: 100vh;
+            /* Full height of the viewport */
         }
+
         .video-container {
-            flex: 1;
+            /* padding-top: 10px; */
+            /* padding-bottom: 10px; */
+            /* flex: 0.3; */
+            padding: 6px;
+            width: 20%;
             position: relative;
-            background-color: black; /* Black background to blend with the video */
+            width: 30%;
+            /* height: 50%; */
+            background-color: black;
+            /* Black background to blend with the video */
+            overflow-y: hidden;
+            overflow-x: hidden;
         }
+
         .video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
         }
-        .profile-section {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .profile-info {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .profile-image {
-            width: 100px;
+        .card{
+            background-color: #dadada;
+            border-radius: 20px;
             height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .profile-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .profile-description {
-            margin-bottom: 10px;
-        }
-        .profile-button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .quiz-section {
-            flex: 1;
-            padding: 20px;
+            width: 75%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            background-color: #f0f0f0;
+            position: relative;
         }
-        .quiz {
-            max-width: 80%; /* Adjust quiz width as needed */
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
+        .profile-img{
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
-        .quiz h2 {
-            margin-top: 0;
+        .profile-name{
+            display: flex;
+            font-size: 15px;
+            position: relative;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Video Section -->
-        <div class="video-container">
-            <video class="video" id="video" controls autoplay>
+        <div class="video-container" id="videoContainer">
+            <video class="video" autoplay loop muted playsinline>
                 <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <div class="profile-info">
-                <img src="user-logo.png" alt="User Logo" class="profile-image">
-                <div class="profile-name">User Name</div>
-                <div class="profile-description">One line description</div>
-                <button class="profile-button">Follow</button>
-            </div>
-        </div>
-
-        <!-- Quiz Section -->
-        <div class="quiz-section">
-            <div class="quiz">
-                <h2>Quiz</h2>
-                <p>Quiz Description</p>
-                <form>
-                    <!-- Quiz questions and options -->
-                    <p>Question 1: What is the capital of France?</p>
-                    <input type="radio" id="paris" name="q1" value="paris">
-                    <label for="paris">Paris</label><br>
-                    <input type="radio" id="london" name="q1" value="london">
-                    <label for="london">London</label><br>
-                    <input type="radio" id="berlin" name="q1" value="berlin">
-                    <label for="berlin">Berlin</label><br>
-                    <input type="radio" id="rome" name="q1" value="rome">
-                    <label for="rome">Rome</label><br>
-                    <!-- Add more questions and options -->
-                    <br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
+        <div class="card">
+            <img class="profile-img" src="person.avif" alt="" />
+            <h3 class="profile-name">Lori Stevens</h3>
+            <h3 style="font-size: 12px; display: flex; position: absolute; left: 5%; bottom: 10%; align-items: center; justify-content: center;">Senior Manager</h3>
         </div>
     </div>
 
     <script>
-        // Autoplay the video when the page is loaded
-        document.addEventListener("DOMContentLoaded", function() {
-            var video = document.getElementById("video");
-            video.play().catch(function(error) {
-                console.log("Autoplay failed:", error);
-            });
+        document.addEventListener('DOMContentLoaded', function () {
+            var videoContainer = document.getElementById('videoContainer');
+            var videoIndex = 0; // Initial video index
+            var videos = ['video.mp4', 'video1.mp4', 'video2.mp4']; // List of video sources
+
+            // Function to change the video when scrolling up or down
+            function changeVideo(event) {
+                var delta = Math.sign(event.deltaY); // Get the scroll direction: -1 for up, 1 for down
+
+                if (delta === 1) {
+                    // Scroll down: move to the next video
+                    videoIndex = (videoIndex + 1) % videos.length;
+                } else {
+                    // Scroll up: move to the previous video
+                    videoIndex = (videoIndex - 1 + videos.length) % videos.length;
+                }
+
+                // Update video source
+                var video = videoContainer.querySelector('video');
+                video.src = videos[videoIndex];
+                video.play();
+            }
+
+            // Listen for wheel events and trigger video change accordingly
+            videoContainer.addEventListener('wheel', changeVideo);
         });
     </script>
 </body>
