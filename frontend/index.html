@@ -90,11 +90,11 @@
   }
 
   #chartdiv {  
-    width: 70%;
-    height: 500px;
+    width: 29vw;
+    height: 350px;
     background-color: #ffffff; /* White background */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Box shadow for depth */
     overflow: hidden; /* Hide overflow */
   }
 
@@ -421,14 +421,14 @@ Header END -->
                         >
                           <!-- User stat item -->
                           <div>
-                            <h6 class="mb-0">256</h6>
-                            <small>Post</small>
+                            <h6 class="mb-0">26</h6>
+                            <small>Posts</small>
                           </div>
                           <!-- Divider -->
                           <div class="vr"></div>
                           <!-- User stat item -->
                           <div>
-                            <h6 class="mb-0">2.5K</h6>
+                            <h6 class="mb-0">250+</h6>
                             <small>Followers</small>
                           </div>
                           <!-- Divider -->
@@ -457,7 +457,7 @@ Header END -->
                       <!-- Card body START -->
                       <!-- <div class="card-body position-relative pt-0"> -->
                       <p>
-                        I am a web developer at Google. I am a passionate web developer and loves to code. I am a full stack developer and I have been working in this field for 5 years. I love to work on new projects and always ready to learn new things.
+                        I am a web developer at Google. I've worked as full stack developer for more than 5 years. I love to work on new projects and learn new things.
                       </p>
                       <!-- Date time -->
                       <ul class="list-unstyled mt-3 mb-0">
@@ -466,8 +466,8 @@ Header END -->
                           <strong> October 20, 1990 </strong>
                         </li>
                         <li class="mb-2">
-                          <i class="bi bi-heart fa-fw pe-1"></i> Status:
-                          <strong> Single </strong>
+                          <i class="bi bi-briefcase fa-fw pe-1"></i> Experience:
+                          <strong> 3+ yrs at Google </strong>
                         </li>
                         <li>
                           <i class="bi bi-envelope fa-fw pe-1"></i> Email:
@@ -630,25 +630,42 @@ Header END -->
 
       
       
-      <div class="col-md-8 col-lg-6 vstack gap-4">
-        <div>
+      <div class="col-md-8 col-lg-6 vstack gap-2" >
+      
+      
 
-          
-        </div>
-
-        <div class="card">
-          <div class="card-header d-flex justify-content-between align-items-center p-2">
-              <div>
-                <h5 class="card-title mb-0" style="padding-inline-start: 10px;padding-top: 10px;">Insights</h5>
-                <div id="chartdiv"></div>
-
-              </div>
+      <div class="card bg-white" style="width: 100%; height: 120px;">
+        <div class="card-body">
+          <div class="d-flex">
+            <div class="avatar avatar-xs me-2">
+              <a href="#"><img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt=""></a>
+            </div>
+            <form class="w-100">
+              <textarea class="form-control pe-4 border-0" data-autoresize placeholder="Share your knowledge with the world!"></textarea>
+            </form>
           </div>
+                
+          <ul class="nav nav-pills nav-stack small fw-normal" style="margin-top: -10px;">
+            <li class="nav-item">
+              <a class="nav-link bg-light py-1 px-2 mb-0" href="#!" data-bs-toggle="modal" data-bs-target="#feedActionPhoto"><i class="bi bi-image-fill text-success pe-2"></i>Photo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-light py-1 px-2 mb-0" href="#!" data-bs-toggle="modal" data-bs-target="#feedActionVideo"><i class="bi bi-camera-reels-fill text-info pe-2"></i>Video</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center p-2">
+            <div>
+              <h5 class="card-title mb-0" style="padding-inline-start: 10px;padding-top: 10px; margin-bottom: 10px;">Insights</h5>
+              <div id="chartdiv"></div>
+            </div>
+        </div>
+    </div>
+
           <!-- Post START -->
-          <!-- FILEPATH: /C:/Users/Lenovo/Documents/GitHub/ACE_Hacks/frontend/index.html -->
-          <!-- BEGIN: ed8c6549bwf9 -->
           <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center p-2">
                 <div>
@@ -657,12 +674,10 @@ Header END -->
                 </div>
             </div>
         </div>
-      
-      
-        <!-- END: ed8c6549bwf9 -->
 
 
         <!-- Story START -->
+        <h5 style="margin-top: 7px;margin-left: 7px;">History</h5>
         <div class="tiny-slider arrow-hover overflow-hidden">
           <div class="tiny-slider-inner ms-n4" data-arrow="true" data-dots="true" data-loop="false" data-autoplay="false" data-items-xl="4" data-items-lg="3" data-items-md="3" data-items-sm="3" data-items-xs="2" data-gutter="12" data-edge="30">
 
@@ -792,27 +807,7 @@ Header END -->
 
 
         <!-- Share feed START -->
-          <div class="card bg-white" style="width: 100%; height: 120px;">
-            <div class="card-body">
-              <div class="d-flex">
-                <div class="avatar avatar-xs me-2">
-                  <a href="#"><img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt=""></a>
-                </div>
-                <form class="w-100">
-                  <textarea class="form-control pe-4 border-0" data-autoresize placeholder="Share your knowledge with the world!"></textarea>
-                </form>
-              </div>
-                    
-              <ul class="nav nav-pills nav-stack small fw-normal" style="margin-top: -10px;">
-                <li class="nav-item">
-                  <a class="nav-link bg-light py-1 px-2 mb-0" href="#!" data-bs-toggle="modal" data-bs-target="#feedActionPhoto"><i class="bi bi-image-fill text-success pe-2"></i>Photo</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link bg-light py-1 px-2 mb-0" href="#!" data-bs-toggle="modal" data-bs-target="#feedActionVideo"><i class="bi bi-camera-reels-fill text-info pe-2"></i>Video</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+         
         <!-- Share feed END -->
 
       </div>
