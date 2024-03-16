@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Screen</title>
+    <style>
+        /* CSS styles for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .container {
+            position: relative;
+            display: flex;
+            height: 100vh; /* Full height of the viewport */
+        }
+        .video-container {
+            flex: 1;
+            position: relative;
+            background-color: black; /* Black background to blend with the video */
+        }
+        .video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .profile-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-info {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .profile-description {
+            margin-bottom: 10px;
+        }
+        .profile-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .quiz-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .quiz {
+            max-width: 80%; /* Adjust quiz width as needed */
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .quiz h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video Section -->
+        <div class="video-container">
+            <video class="video" id="video" controls autoplay>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-info">
+                <img src="user-logo.png" alt="User Logo" class="profile-image">
+                <div class="profile-name">User Name</div>
+                <div class="profile-description">One line description</div>
+                <button class="profile-button">Follow</button>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz-section">
+            <div class="quiz">
+                <h2>Quiz</h2>
+                <p>Quiz Description</p>
+                <form>
+                    <!-- Quiz questions and options -->
+                    <p>Question 1: What is the capital of France?</p>
+                    <input type="radio" id="paris" name="q1" value="paris">
+                    <label for="paris">Paris</label><br>
+                    <input type="radio" id="london" name="q1" value="london">
+                    <label for="london">London</label><br>
+                    <input type="radio" id="berlin" name="q1" value="berlin">
+                    <label for="berlin">Berlin</label><br>
+                    <input type="radio" id="rome" name="q1" value="rome">
+                    <label for="rome">Rome</label><br>
+                    <!-- Add more questions and options -->
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Autoplay the video when the page is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("video");
+            video.play().catch(function(error) {
+                console.log("Autoplay failed:", error);
+            });
+        });
+    </script>
+</body>
+</html>
