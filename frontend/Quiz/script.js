@@ -1596,7 +1596,7 @@ var infoData = [
   { name: 'Mike Johnson', title: 'Senior Manager', image: 'https://www.milkround.com/advice/wp-content/uploads/how-to-take-a-good-linkedin-photo-1024x576.jpg' },
   { name: 'Jane Smith', title: 'Software Engineer', image: 'https://cdn.openart.ai/uploads/image_Sg__ilLp_1698687691182_raw.jpg' },
   { name: 'Joe Doe', title: 'Product Designer', image: 'https://onlineprofilepros.com/wp-content/uploads/2017/12/profile-photo.jpeg' },
-  { name: 'Meet Patel', title: 'Marketing Specialist', image: 'https://cdn.openart.ai/uploads/image_Sg__ilLp_1698687691182_raw.jpg' },
+  { name: 'Shradha Didi', title: 'Engineer & Teacher', image: 'https://media.licdn.com/dms/image/D4D03AQHGNAxeyJhZbQ/profile-displayphoto-shrink_800_800/0/1685972237021?e=2147483647&v=beta&t=FceaUKIQSGe-o1AaXSPct6VQdwcopX-ejFhb4jQj-AE' },
   { name: 'Heer Mehta', title: 'Financial Analyst', image: 'https://www.hagopsphotography.com/wp-content/uploads/2021/10/Female-LinkedIn-portrait.jpg' },
   { name: 'Danush Nadar', title: 'Graphic Designer', image: 'https://www.milkround.com/advice/wp-content/uploads/how-to-take-a-good-linkedin-photo-1024x576.jpg' },
   { name: 'Viir Phuria', title: 'Project Manager', image: 'https://cdn.openart.ai/uploads/image_Sg__ilLp_1698687691182_raw.jpg' }
