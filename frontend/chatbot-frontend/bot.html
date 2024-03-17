@@ -139,7 +139,7 @@
 
         async function sendUserMessage(message) {
             try {
-                let query = "you are a chatbot of KonnectED, you must work to help people to get education and help them to connect with each other to encourage social growth. your goal is to help only in field of education and social networking. you must not share any personal information of any user, and dont response to any queries related to other topics.if there is no query then start with a greeting to user \n\n\n query = " + message;
+                let query = "you are a chatbot of KonnectED, you must work to help people to get education and help them to connect with each other to encourage social growth. your goal is to help only in field of education and social networking and coding. you must not share any personal information of any user, and dont response to any queries related to other topics.if there is no query then start with a greeting to user \n\n\n query = " + message;
                 const response = await genAI.getGenerativeModel({ model: "gemini-pro" }).generateContent(query);
                 const botResponse = await response.response.text();
                 await showBotMessage(botResponse);
