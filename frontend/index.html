@@ -420,7 +420,7 @@
                                                 href="#!"
                                                 style="margin-left: 10px"
                                                 >
-                                            <i class="fa-solid fa-plus"></i>
+                                                <i class="fa-solid fa-plus" style="width: 1em; height: 1em;"></i>
                                             </a>
 
                                             <h5 class="card-title d-inline" id="experience">Experience</h5>
@@ -478,7 +478,7 @@
                             </div>
                         </div>
                         <!-- Story START -->
-                        <h5 style="margin-top: 5px;margin-left:3px;">🕜 History</h5>
+                        <h5 style="margin-top: 5px;margin-left:3px;" id="edit3">🕜 History</h5>
                         <div class="tiny-slider arrow-hover overflow-hidden">
                             <div class="tiny-slider-inner ms-n4" data-arrow="true" data-dots="true" data-loop="false" data-autoplay="false" data-items-xl="4" data-items-lg="3" data-items-md="3" data-items-sm="3" data-items-xs="2" data-gutter="12" data-edge="30">
                                 <!-- Slider items -->
@@ -2049,15 +2049,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById("edit2").style.display = "block";
                     let editElements = document.getElementsByClassName("editclass");
                     for (let i = 0; i < editElements.length; i++) {
-                        editElements[i].style.display = "block";
+                        editElements[i].style.display = "none";
                     }
+                    document.getElementById("edit3").innerText = "🕜 History";
+                    
                 } else {
                     document.getElementById("edit").style.display = "none";
                     document.getElementById("edit2").style.display = "none";
                     let editElements = document.getElementsByClassName("editclass");
                     for (let i = 0; i < editElements.length; i++) {
-                        editElements[i].style.display = "none";
+                        editElements[i].style.display = "block";
                     }
+                    document.getElementById("edit3").innerText = " Suggested";
                 }
 
 
