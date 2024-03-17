@@ -1229,7 +1229,7 @@ info_box.classList.add("activeInfo");
 // if exitQuiz button clicked
 exit_btn.onclick = () => {
     info_box.classList.remove("activeInfo"); //hide info box
-    window.open('index.html', '_self');
+    // window.open('index.html', '_self');
 }
 // if continueQuiz button clicked
 continue_btn.onclick = () => {
@@ -1410,7 +1410,7 @@ function queCounter(index) {
 document.addEventListener('DOMContentLoaded', function () {
     var videoContainer = document.getElementById('videoContainer');
     var videoIndex = 0; // Initial video index
-    var videos = ['array.mp4', 'heaps.mp4', 'Stack.mp4', 'binarysearch.mp4', 'graphs.mp4', 'linkedlist.mp4', 'queue.mp4']; // List of video sources
+    var videos = ['array.mp4', 'heaps.mp4', 'Stack.mp4', 'binarysearch.mp4', 'graph.mp4', 'linkedlist.mp4', 'queue.mp4']; // List of video sources
     // var scriptFilePaths = ['TensionFlow_ACE\\frontend\\DSA-Quiz-App\\JS\\array.js', 'TensionFlow_ACE\\frontend\\DSA-Quiz-App\\JS\\heap.js', 'TensionFlow_ACE\\frontend\\DSA-Quiz-App\\JS\\Stack.js'];
 
     function showQuizInfo() {
@@ -1496,11 +1496,18 @@ document.addEventListener('DOMContentLoaded', function () {
             // Scroll down: move to the next video
             // videoIndex = (videoIndex + 1) % videos.length;
             videoIndex ++;
+            if (videoIndex >= videos.length) {
+                videoIndex = 0;
+            }
         } else {
             // Scroll up: move to the previous video
             // videoIndex = (videoIndex - 1 + videos.length) % videos.length;
             videoIndex --;
+            if (videoIndex < 0) {
+                videoIndex = videos.length - 1;
+            }
         }
+        // console.log(videoIndex);
 
         // Update video source
         var video = videoContainer.querySelector('video');
@@ -1536,8 +1543,34 @@ document.addEventListener('DOMContentLoaded', function () {
         // Call the respective quiz data function and assign the questions to the global 'questions' variable
         questions = quizDataFunction();
 
+        // Update info data
+        var info = infoSection.querySelector('.profile-info');
+        info.querySelector('.profile-title').textContent = infoData[videoIndex].name;
+        info.querySelector('.profile-name').textContent = infoData[videoIndex].title;
+
+        var fromElement = document.getElementById('profile-img');
+        fromElement.src = infoData[videoIndex].image;
+
         // showQuizInfo(); // Uncomment this line if needed
     }
+    
+    // get id get param from url
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    // handle undefined id
+    if (id === null) {
+        id = 1;
+    }
+
+    var video = videoContainer.querySelector('video');
+    video.src = videos[parseInt(id)-1];
+    video.play();
+
+    questions = arrayQuizData();
+
+
     // Listen for wheel events and trigger video change accordingly
     videoContainer.addEventListener('wheel', changeVideo);
 
@@ -1554,10 +1587,17 @@ document.addEventListener('DOMContentLoaded', function () {
             var lock = document.querySelector(".fa-lock")
             lock.style.display = "none";
             restartButton.style.display = 'block'; // Set display property back to default (block)
-            colorChange.style.background = "none"; // Remove background color property;
+            // colorChange.style.background = "none"; // Remove background color property;
         }, duration);
     });
 });
 
-
-
+var infoData = [
+  { name: 'Mike Johnson', title: 'Senior Manager', image: 'https://www.milkround.com/advice/wp-content/uploads/how-to-take-a-good-linkedin-photo-1024x576.jpg' },
+  { name: 'Jane Smith', title: 'Software Engineer', image: 'https://cdn.openart.ai/uploads/image_Sg__ilLp_1698687691182_raw.jpg' },
+  { name: 'Joe Doe', title: 'Product Designer', image: 'https://onlineprofilepros.com/wp-content/uploads/2017/12/profile-photo.jpeg' },
+  { name: 'Meet Patel', title: 'Marketing Specialist', image: 'https://cdn.openart.ai/uploads/image_Sg__ilLp_1698687691182_raw.jpg' },
+  { name: 'Heer Mehta', title: 'Financial Analyst', image: 'https://www.hagopsphotography.com/wp-content/uploads/2021/10/Female-LinkedIn-portrait.jpg' },
+  { name: 'Danush Nadar', title: 'Graphic Designer', image: 'https://www.milkround.com/advice/wp-content/uploads/how-to-take-a-good-linkedin-photo-1024x576.jpg' },
+  { name: 'Viir Phuria', title: 'Project Manager', image: 'https://cdn.openart.ai/uploads/image_Sg__ilLp_1698687691182_raw.jpg' }
+];
