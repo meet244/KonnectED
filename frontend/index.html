@@ -338,14 +338,15 @@
                                                 <!-- Avatar -->
                                                 <div class="avatar avatar-lg mt-n5 mb-3">
                                                     <img
+                                                    id="image"
                                                         class="avatar-img rounded border border-white border-3"
-                                                        src="assets/images/avatar/07.jpg"
+                                                        src=""
                                                         alt=""
                                                         />
                                                 </div>
                                                 <!-- Info -->
-                                                <h5 class="mb-0">Jay Patel</h5>
-                                                <small>Web Developer at Google</small>
+                                                <h5 class="mb-0" id="name">Jay Patel</h5>
+                                                <small id="subtitle">Web Developer at Google</small>
                                                 <p class="mt-3" id="quote">
                                                     I'd love to change the world, but they won’t give me
                                                     the source code.
@@ -379,7 +380,9 @@
                                             <!-- Divider -->
                                             <hr />
                                             <!-- <div class="card-header border-0 pb-0"> -->
-                                            <button class="btn btn-primary-soft me-2 w-100" type="button"> <i class="bi bi-pencil-fill pe-1"></i> Edit profile </button>
+                                            <button id="edit" class="btn btn-primary-soft me-2 w-100" type="button" onclick="window.location.href = 'settings.html'">
+                                                <i class="bi bi-pencil-fill pe-1"></i> Edit profile
+                                            </button>
                                             <!-- </div> -->
                                             <!-- sapce -->
                                             <div class="mb-3"></div>
@@ -412,70 +415,17 @@
                                             <!-- <div class="card-header d-flex justify-content-between border-0"> -->
                                             <!-- BEGIN: ed8c6549bwf9 -->
                                             <h5 class="card-title d-inline">Experience</h5>
-                                            <a
+                                            <a id="edit2"
                                                 class="btn btn-primary-soft btn-sm ms-2"
                                                 href="#!"
                                                 style="margin-left: 10px"
                                                 >
                                             <i class="fa-solid fa-plus"></i>
                                             </a>
-                                            <!-- Experience item START -->
-                                            <div class="d-flex">
-                                                <!-- Avatar -->
-                                                <div class="avatar me-3">
-                                                    <a href="#!">
-                                                        <img class="avatar-img rounded-circle" src="assets/images/logo/08.svg" alt="" />
-                                                    </a>
-                                                </div>
-                                                <!-- Info -->
-                                                <div>
-                                                    <h6 class="card-title mb-0">
-                                                        <a href="#!"> Apple Computer, Inc. </a>
-                                                    </h6>
-                                                    <p class="small">
-                                                        May 2015 – Present Employment Duration 8 mos
-                                                        <a class="btn btn-primary-soft btn-xs ms-2" href="#!" id="edit1">Edit</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!-- Experience item END -->
-                                            <!-- Experience item START -->
-                                            <div class="d-flex">
-                                                <!-- Avatar -->
-                                                <div class="avatar me-3">
-                                                    <a href="#!">
-                                                        <img class="avatar-img rounded-circle" src="assets/images/logo/09.svg" alt="" />
-                                                    </a>
-                                                </div>
-                                                <!-- Info -->
-                                                <div>
-                                                    <h6 class="card-title mb-0">
-                                                        <a href="#!"> Microsoft Corporation </a>
-                                                    </h6>
-                                                    <p class="small">
-                                                        May 2017 – Present Employment Duration 1 yrs 5 mos
-                                                        <a class="btn btn-primary-soft btn-xs ms-2" href="#!" id="edit2">Edit</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex">
-                                                <!-- Avatar -->
-                                                <div class="avatar me-3">
-                                                    <a href="#!">
-                                                        <img class="avatar-img rounded-circle" src="assets/images/logo/10.svg" alt="" />
-                                                    </a>
-                                                </div>
-                                                <!-- Info -->
-                                                <div>
-                                                    <h6 class="card-title mb-0">
-                                                        <a href="#!"> Tata Consultancy Services. </a>
-                                                    </h6>
-                                                    <p class="small mb-0">
-                                                        May 2022 – Present Employment Duration 6 yrs 10 mos
-                                                        <a class="btn btn-primary-soft btn-xs ms-2" href="#!" id="edit3">Edit</a>
-                                                    </p>
-                                                </div>
-                                            </div>
+
+                                            <h5 class="card-title d-inline" id="experience">Experience</h5>
+                                            
+                                            
                                             <!-- Side Nav END -->
                                         </div>
                                         <!-- Card body END -->
@@ -494,7 +444,7 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="avatar avatar-xs me-2">
-                                        <a href="#"><img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt=""></a>
+                                        <a href="#"><img class="avatar-img rounded-circle" id="image2" src="" alt=""></a>
                                     </div>
                                     <form class="w-100">
                                         <textarea class="form-control pe-4 border-0" data-autoresize placeholder="Share your knowledge with the world!"></textarea>
@@ -538,7 +488,7 @@
                                     <div
                                         class="card card-overlay-bottom border-0 position-relative h-200px"
                                         style="
-                                        background-image: url(assets/images/post/1by1/02.jpg);
+                                        background-image: url(Thumbnail/Array.png);
                                         background-position: center left;
                                         background-size: cover;
                                         "
@@ -547,7 +497,7 @@
                                             <div class="w-100 mt-auto">
                                                 <!-- Name -->
                                                 <a href="#!" class="stretched-link text-white small"
-                                                    >Judy Nguyen</a
+                                                    >Arrays</a
                                                     >
                                             </div>
                                         </div>
@@ -560,7 +510,7 @@
                                     <div
                                         class="card card-overlay-bottom border-0 position-relative h-200px"
                                         style="
-                                        background-image: url(assets/images/post/1by1/03.jpg);
+                                        background-image: url(Thumbnail/Binary\ Search.png);
                                         background-position: center left;
                                         background-size: cover;
                                         "
@@ -569,7 +519,7 @@
                                             <div class="w-100 mt-auto">
                                                 <!-- Name -->
                                                 <a href="#!" class="stretched-link text-white small"
-                                                    >Samuel Bishop</a
+                                                    >Binary Search</a
                                                     >
                                             </div>
                                         </div>
@@ -582,7 +532,7 @@
                                     <div
                                         class="card card-overlay-bottom border-0 position-relative h-200px"
                                         style="
-                                        background-image: url(assets/images/post/1by1/04.jpg);
+                                        background-image: url(Thumbnail/Graphs.png);
                                         background-position: center left;
                                         background-size: cover;
                                         "
@@ -591,7 +541,7 @@
                                             <div class="w-100 mt-auto">
                                                 <!-- Name -->
                                                 <a href="#!" class="stretched-link text-white small"
-                                                    >Carolyn Ortiz</a
+                                                    >Graphs</a
                                                     >
                                             </div>
                                         </div>
@@ -604,7 +554,7 @@
                                     <div
                                         class="card card-overlay-bottom position-relative h-200px"
                                         style="
-                                        background-image: url(assets/images/post/1by1/05.jpg);
+                                        background-image: url(Thumbnail/Heap.png);
                                         background-position: center left;
                                         background-size: cover;
                                         "
@@ -613,7 +563,7 @@
                                             <div class="w-100 mt-auto">
                                                 <!-- Name -->
                                                 <a href="#!" class="stretched-link text-white small"
-                                                    >Amanda Reed</a
+                                                    >Heap Sort</a
                                                     >
                                             </div>
                                         </div>
@@ -626,7 +576,7 @@
                                     <div
                                         class="card card-overlay-bottom border-0 position-relative h-200px"
                                         style="
-                                        background-image: url(assets/images/post/1by1/01.jpg);
+                                        background-image: url(Thumbnail/Linked\ List.png);
                                         background-position: center left;
                                         background-size: cover;
                                         "
@@ -635,7 +585,7 @@
                                             <div class="w-100 mt-auto">
                                                 <!-- Name -->
                                                 <a href="#!" class="stretched-link text-white small"
-                                                    >Lori Stevens</a
+                                                    >Linked List</a
                                                     >
                                             </div>
                                         </div>
@@ -666,130 +616,42 @@
                                         <div class="hstack gap-2 mb-3">
                                             <!-- Avatar -->
                                             <div class="avatar">
-                                                <a href="#!"
-                                                    ><img
-                                                    class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/04.jpg"
-                                                    alt=""
-                                                    /></a>
+                                                <a href="index.html?id=dbf87d73659f4b39a18d18942f3e2c1b">
+                                                    <img class="avatar-img rounded-circle" src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
+                                                </a>
                                             </div>
                                             <!-- Title -->
                                             <div class="overflow-hidden">
-                                                <a class="h6 mb-0" href="#!">Aarav Mehta</a>
+                                                <a class="h6 mb-0" href="index.html?id=dbf87d73659f4b39a18d18942f3e2c1b">Aarav Mehta</a>
                                                 <p class="mb-0 small text-truncate">News anchor</p>
                                             </div>
                                             <!-- Button -->
-                                            <a
-                                                class="btn btn-primary-soft rounded-circle icon-md ms-auto"
-                                                href="#"
-                                                ><i class="fa-solid fa-plus"> </i
-                                                ></a>
+                                            <a id="toggleButton1" class="btn btn-primary-soft rounded-circle icon-md ms-auto toggleButton" href="#">
+                                                <i id="toggleIcon1" class="fa-solid fa-plus"></i>
+                                            </a>
                                         </div>
                                         <!-- Connection item END -->
                                         <!-- Connection item START -->
                                         <div class="hstack gap-2 mb-3">
                                             <!-- Avatar -->
                                             <div class="avatar">
-                                                <a href="#!">
-                                                <img
-                                                    class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/05.jpg"
-                                                    alt=""
-                                                    />
+                                                <a href="index.html?id=9b6eafab1f4f4fd0b4f7490c8bb4dd77">
+                                                    <img class="avatar-img rounded-circle" src="https://www.hagopsphotography.com/wp-content/uploads/2021/10/Female-LinkedIn-portrait.jpg" alt="" />
                                                 </a>
                                             </div>
                                             <!-- Title -->
                                             <div class="overflow-hidden">
-                                                <a class="h6 mb-0" href="#!">Aaradhya Sharma </a>
+                                                <a class="h6 mb-0" href="index.html?id=9b6eafab1f4f4fd0b4f7490c8bb4dd77">Aaradhya Sharma </a>
                                                 <p class="mb-0 small text-truncate">Web Developer</p>
                                             </div>
                                             <!-- Button -->
-                                            <a
-                                                class="btn btn-primary-soft rounded-circle icon-md ms-auto"
-                                                href="#"
-                                                ><i class="fa-solid fa-plus"> </i
-                                                ></a>
+                                            <a id="toggleButton2" class="btn btn-primary-soft rounded-circle icon-md ms-auto toggleButton" href="#">
+                                                <i id="toggleIcon2" class="fa-solid fa-plus"></i>
+                                            </a>
                                         </div>
-                                        <!-- Connection item END -->
-                                        <!-- Connection item START -->
-                                        <div class="hstack gap-2 mb-3">
-                                            <!-- Avatar -->
-                                            <div class="avatar">
-                                                <a href="#">
-                                                <img
-                                                    class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/11.jpg"
-                                                    alt=""
-                                                    />
-                                                </a>
-                                            </div>
-                                            <!-- Title -->
-                                            <div class="overflow-hidden">
-                                                <a class="h6 mb-0" href="#!">Aanya Verma </a>
-                                                <p class="mb-0 small text-truncate">News anchor</p>
-                                            </div>
-                                            <!-- Button -->
-                                            <a
-                                                class="btn btn-primary rounded-circle icon-md ms-auto"
-                                                href="#"
-                                                ><i class="bi bi-person-check-fill"> </i
-                                                ></a>
-                                        </div>
-                                        <!-- Connection item END -->
-                                        <!-- Connection item START -->
-                                        <div class="hstack gap-2 mb-3">
-                                            <!-- Avatar -->
-                                            <div class="avatar">
-                                                <a href="#">
-                                                <img
-                                                    class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/01.jpg"
-                                                    alt=""
-                                                    />
-                                                </a>
-                                            </div>
-                                            <!-- Title -->
-                                            <div class="overflow-hidden">
-                                                <a class="h6 mb-0" href="#!">Jeet Phuria</a>
-                                                <p class="mb-0 small text-truncate">
-                                                    Web Developer at Meta
-                                                </p>
-                                            </div>
-                                            <!-- Button -->
-                                            <a
-                                                class="btn btn-primary-soft rounded-circle icon-md ms-auto"
-                                                href="#"
-                                                ><i class="fa-solid fa-plus"> </i
-                                                ></a>
-                                        </div>
-                                        <!-- Connection item END -->
-                                        <!-- Connection item START -->
-                                        <div class="hstack gap-2 mb-3">
-                                            <!-- Avatar -->
-                                            <div class="avatar">
-                                                <a href="#">
-                                                <img
-                                                    class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/placeholder.jpg"
-                                                    alt=""
-                                                    />
-                                                </a>
-                                            </div>
-                                            <!-- Title -->
-                                            <div class="overflow-hidden">
-                                                <a class="h6 mb-0" href="#!">Aarohi Nadar </a>
-                                                <p class="mb-0 small text-truncate">News anchor</p>
-                                            </div>
-                                            <!-- Button -->
-                                            <a
-                                                class="btn btn-primary-soft rounded-circle icon-md ms-auto"
-                                                href="#"
-                                                ><i class="fa-solid fa-plus"> </i
-                                                ></a>
-                                        </div>
-                                        <!-- Connection item END -->
-                                        <!-- View more button -->
+                                        <!-- Add more items as needed -->
                                     </div>
+                                    
                                     <!-- Card body END -->
                                 </div>
                             </div>
@@ -801,50 +663,13 @@
               <!-- Card header START -->
               <div class="container mt-5">
                
-                        <h5 class="card-title">Skills</h5>
+                  
+                  <h5 class="card-title">Skills</h5>
+                  <h5 class="card-title" id="skills">Skills</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-laptop me-2"></i>
-                                    <span>Coding</span>
-                                    <div class="ms-auto">
-                                        <button class="endorse-button" onclick="endorse(this)">Endorse</button>
-                                        <span class="endorse-count" id="coding-count"> 0</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fab fa-python me-2"></i>
-                                    <span>Python</span>
-                                    <div class="ms-auto">
-                                        <button class="endorse-button" onclick="endorse(this)">Endorse</button>
-                                        <span class="endorse-count" id="python-count"> 0</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fab fa-android me-2"></i>
-                                    <span>Flutter</span>
-                                    <div class="ms-auto">
-                                        <button class="endorse-button" onclick="endorse(this)">Endorse</button>
-                                        <span class="endorse-count" id="flutter-count"> 0</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-chart-line me-2"></i>
-                                    <span>Data Analysis</span>
-                                    <div class="ms-auto">
-                                        <button class="endorse-button" onclick="endorse(this)">Endorse</button>
-                                        <span class="endorse-count" id="data-analysis-count"> 0</span>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -2100,9 +1925,47 @@
 
         <!-- MY JS -->
         <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggleButton');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonId = button.id;
+            const icon = document.getElementById('toggleIcon' + buttonId.substring(11)); // Extracting the number from buttonId
+            if (icon.classList.contains('fa-plus')) {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-check');
+            } else {
+                icon.classList.remove('fa-check');
+                icon.classList.add('fa-plus');
+            }
+        });
+    });
+});
+
+        var isself = true;
+
         async function fetchData() {
             try {
-                let response = await fetch("http://127.0.0.1:5000/read1", { 
+
+                // read get parameters
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const id = urlParams.get('id');
+
+                console.log(id);
+
+                var url  = '';
+                if (id != null) {
+                    url = "http://127.0.0.1:5000/user/" + id;
+                    isself = false;
+                } else {
+                    // Add catch block
+                    url = "http://127.0.0.1:5000/read1";
+                }
+
+                let response = await fetch(url, { 
                     method: "GET",
                 });
 
@@ -2112,33 +1975,90 @@
 
                 let data = await response.json(); // Parse the response as JSON
 
+                
+                if (!data) {
+                    throw new Error("Failed to parse response data");
+                }
+                console.log(data);
+
                 // Update the website data using the response data
-                document.getElementById("name").innerText = data.name;
-                document.getElementById("subtitle").innerText = data.subtitle;
-                document.getElementById("about").innerText = data.about;
-                document.getElementById("email").innerText = data.email;
-                document.getElementById("quote").innerText = data.quote;
+                document.getElementById("name").innerText = data['name'];
+                document.getElementById("subtitle").innerText = data['subtitle'];
+                document.getElementById("about").innerText = data['about'];
+                document.getElementById("email").innerText = data['email'];
+                document.getElementById("quote").innerText = data['quote'];
 
                 // Update the experience section
-                let experienceList = document.getElementById("experience-list");
+                let experienceList = document.getElementById("experience");
                 experienceList.innerHTML = ""; // Clear existing list
 
-                data.experience.forEach((experience) => {
-                    let listItem = document.createElement("li");
-                    listItem.innerText = `${experience.company} (${experience.duration})`;
+                data['experience'].forEach((experience) => {
+                    let listItem = document.createElement("div");
+                    listItem.classList.add("d-flex");
+                    listItem.innerHTML = `
+                        <div class="avatar me-3">
+                            <a href="#!">
+                                <img class="avatar-img rounded-circle" src="assets/images/logo/08.svg" alt="" />
+                            </a>
+                        </div>
+                        <div>
+                            <h6 class="card-title mb-0">
+                                <a href="#!">${experience['company']}</a>
+                            </h6>
+                            <p class="small">
+                                ${experience['duration']}
+                                <a class="btn btn-primary-soft btn-xs ms-2 editclass" href="#!" id="edit1">Edit</a>
+                            </p>
+                        </div>
+                    `;
                     experienceList.appendChild(listItem);
                 });
 
                 // Update the skills
                 let skillsList = document.getElementById("skills");
                 skillsList.innerHTML = ""; // Clear existing list
-                // dynamically add skills
-                data.skills.forEach((skill) => {
-                    console.log(skill);
-                    let listItem = document.createElement("li");
-                    listItem.innerText = skill;
+
+
+                // Dynamically add skills
+                data['skills'].forEach((skill) => {
+                    let listItem = document.createElement("div");
+                    listItem.classList.add("col-12");
+                    listItem.innerHTML = `
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-laptop me-2"></i>
+                            <span class="small">${skill}</span>
+                            <div class="ms-auto d-flex align-items-center">
+                                <button class="endorse-button btn-sm editclass" onclick="endorse(this)">Endorse</button>
+                                <span class="endorse-count small" id="${skill.toLowerCase()}-count"> 0</span>
+                            </div>
+                        </div>
+                    `;
                     skillsList.appendChild(listItem);
+
+                // Update the image
+                document.getElementById("image").src = data['image'];
+                document.getElementById("image2").src = data['image'];
+                
                 });
+
+
+
+                // Update the ui
+                if (isself) {
+                    document.getElementById("edit").style.display = "block";
+                    document.getElementById("edit2").style.display = "block";
+                    let editElements = document.getElementsByClassName("editclass");
+                    for (let i = 0; i < editElements.length; i++) {
+                        editElements[i].style.display = "block";
+                    }
+                } else {
+                    document.getElementById("edit").style.display = "none";
+                    document.getElementById("edit2").style.display = "none";
+                    let editElements = document.getElementsByClassName("editclass");
+                    for (let i = 0; i < editElements.length; i++) {
+                        editElements[i].style.display = "none";
+                    }
+                }
 
 
 
