@@ -73,7 +73,31 @@
             />
         <!-- chart -->
         <style>
-            
+           .floating-button {
+    position: fixed;
+    bottom: 100px;
+    right: 37px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Adjust border radius to make it look more like a square */
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 70px; /* Adjust line-height to center the icon vertically */
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+   
+
+    /* Custom styling for the circular image */
+    
             body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4; /* Light gray background */
@@ -752,6 +776,19 @@
         <!-- Main Chat START -->
         <div class="d-none d-lg-block">
             <!-- Button -->
+            <button class="floating-button" onclick="openChatbot()">
+                <i class="fas fa-robot"></i>
+            </button>
+            
+                <script>
+                    /**
+                     * Function to open the chatbot page.
+                     */
+                    function openChatbot() {
+                        window.open('chatbot-frontend/bot.html');
+                    }
+                </script>
+            </button>
             <a
                 class="icon-md btn btn-primary position-fixed end-0 bottom-0 me-5 mb-5"
                 data-bs-toggle="offcanvas"

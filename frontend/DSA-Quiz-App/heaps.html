@@ -9,6 +9,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
+    <button class="floating-button" onclick="openChatbot()">
+        <i class="fas fa-robot"></i>
+    </button>
+    
+        <script>
+            /**
+             * Function to open the chatbot page.
+             */
+            function openChatbot() {
+                window.open('../chatbot-frontend/bot.html');
+            }
+        </script>
+    </button>
+
+<style>
+   .floating-button {
+position: fixed;
+bottom: 40px;
+right: 37px;
+background-color: #0d6efd;
+color: white;
+border: none;
+border-radius: 10px; /* Adjust border radius to make it look more like a square */
+width: 60px;
+height: 60px;
+font-size: 24px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+line-height: 70px; /* Adjust line-height to center the icon vertically */
+cursor: pointer;
+z-index: 9999;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+</style>
     <!-- Info Box -->
     <div class="info_box">
         <div class="info-title"><span>Some Rules of this Quiz</span></div>
