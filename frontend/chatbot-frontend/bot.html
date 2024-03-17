@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO related -->
+        <!-- Meta related -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gemini Chatbot</title>
+
+    <!-- Vendor CSS & style files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+   </head>
+
+
+<body>
+   
+
+    <div class="container">
+        <div class="row padded_row">
+            <!-- Right side content -->
+            <div class="col-md-7">
+                <div class="chat_window">
+                    <div class="top_menu">
+                        <div class="title">ChatBot - Gemini</div>
+                    </div>
+                    <!-- Dynamically rendered -->
+                    <ul class="messages"></ul>
+                    <!-- Input -->
+                    <div class="bottom_wrapper">
+                        <input id="msg_input" placeholder="Say Hi to begin chat..." />
+                        <div id="send_button" class="app_button_1">Send</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left side content -->
+            <div class="col-md-5">
+                <div class="chat_window">
+                    <div class="top_menu">
+                        <div class="title">Help</div>
+                    </div>
+                    <!-- Help container -->
+                    <div class="panel-group" id="accordion">
+                        <!-- Help - 1 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapse1">How to get started?</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    To start chatting with the ChatBot, simply type "Hi" or "Hello" in the chat input
+                                    box and press the "Send" button.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor script files -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    </script>
+
+    <!-- Google Generative AI import map -->
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+    </script>
+
+    <!-- Custom scripts -->
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+
+        // Fetch your API_KEY
+        const API_KEY = "AIzaSyD1B-WXBbime7ti7JuA2ta7oQi7JMB9Gbc";//put ur own api key
+
+        // Access your API key
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        function getCurrentTimestamp() {
+            return new Date();
+        }
+
+        function renderMessageToScreen(args) {
+            let displayDate = (args.time || getCurrentTimestamp()).toLocaleString('en-IN', {
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+            });
+            let messagesContainer = $('.messages');
+            let message = $(`
+                <li class="message ${args.message_side}">
+                    <div class="avatar"></div>
+                    <div class="text_wrapper">
+                        <div class="text">${args.text}</div>
+                        <div class="timestamp">${displayDate}</div>
+                    </div>
+                </li>
+            `);
+            messagesContainer.append(message);
+            setTimeout(function () {
+                message.addClass('appeared');
+            }, 0);
+            messagesContainer.animate({ scrollTop: messagesContainer.prop('scrollHeight') }, 300);
+        }
+
+        async function showUserMessage(message, datetime) {
+            renderMessageToScreen({
+                text: message,
+                time: datetime,
+                message_side: 'right',
+            });
+        }
+
+        async function showBotMessage(message, datetime) {
+            renderMessageToScreen({
+                text: message,
+                time: datetime,
+                message_side: 'left',
+            });
+        }
+
+        async function sendUserMessage(message) {
+            try {
+                const response = await genAI.getGenerativeModel({ model: "gemini-pro" }).generateContent(message);
+                const botResponse = await response.response.text();
+                await showBotMessage(botResponse);
+            } catch (error) {
+                console.error("Error fetching bot response:", error);
+                await showBotMessage("I'm sorry, I couldn't process your request at the moment.");
+            }
+        }
+
+        $('#send_button').on('click', async function (e) {
+            var userInput = $('#msg_input').val();
+            await showUserMessage(userInput);
+            $('#msg_input').val('');
+            await sendUserMessage(userInput);
+        });
+
+        $(document).ready(function () {
+            $('#msg_input').keydown(function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    $('#send_button').click();
+                }
+            });
+        });
+
+        $(window).on('load', function () {
+            showBotMessage('Hello there! Type in a message.');
+        });
+    </script>
+</body>
+
+</html>
