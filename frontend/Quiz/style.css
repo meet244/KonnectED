@@ -1,4 +1,4 @@
-/* importing google fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -17,7 +17,7 @@ body {
   background: #31224d;
 }
 
-/*.start_btn,*/
+
 .info_box,
 .quiz_box,
 .result_box {
@@ -52,7 +52,7 @@ body {
   background: #fff;
   border-radius: 5px;
   transform: translate(-50%, -50%) scale(0.9);
-  /* opacity: 0; */
+  
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -347,7 +347,7 @@ footer button.show {
   display: flex;
   height: 100vh;
   background-color: #eaf0fd;
-  /* Full height of the viewport */
+  
 }
 
 .video {
@@ -368,16 +368,16 @@ footer button.show {
 }
 
 .video-container {
-  /* padding-top: 10px; */
-  /* padding-bottom: 10px; */
-  /* flex: 0.3; */
+  
+  
+  
   padding: 6px;
   width: 20%;
   position: relative;
   width: 30%;
-  /* height: 50%; */
+  
   background-color: #eaf0fd;
-  /* Black background to blend with the video */
+  
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
@@ -391,7 +391,7 @@ footer button.show {
 }
 
 .card {
-    margin-top: 100px; /* Added margin-top */
+    margin-top: 100px; 
     padding-right: 70px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -404,8 +404,8 @@ footer button.show {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .plus-button {

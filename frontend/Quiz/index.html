@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Screen</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- FontAwesome CDN Link for Icons -->
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,17 +19,54 @@
     />
   </head>
   <body>
+    <button class="floating-button" onclick="openChatbot()">
+      <i class="fas fa-robot"></i>
+  </button>
+  
+      <script>
+          /**
+           * Function to open the chatbot page.
+           */
+          function openChatbot() {
+              window.open('../chatbot-frontend/bot.html');
+          }
+      </script>
+  </button>
+
+<style>
+ .floating-button {
+position: fixed;
+bottom: 40px;
+right: 37px;
+background-color: #0d6efd;
+color: white;
+border: none;
+border-radius: 10px; 
+width: 60px;
+height: 60px;
+font-size: 24px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+line-height: 70px; 
+cursor: pointer;
+z-index: 9999;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+</style>
     <div class="container">
-      <!-- Video Section -->
+      
       <div class="video-container" id="videoContainer">
         <video class="video" autoplay loop muted playsinline>
-          <!-- <source src="array.mp4" type="video/mp4" > -->
+          
           <source type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
-      <!-- <div class="card"> -->
+      
       <div class="card" id="infoSection" style="width: auto">
         <img
         id="profile-img"
@@ -62,7 +99,7 @@
           <i class="fas fa-plus"></i>
         </div>
       </div>
-      <!-- </div> -->
+      
 
       <div class="info_box">
         <i
@@ -97,7 +134,7 @@
           <button class="restart">Continue</button>
         </div>
       </div>
-      <!-- Quiz Box -->
+      
       <div class="quiz_box">
         <header>
           <div class="title">Arrays Quiz</div>
@@ -109,28 +146,28 @@
         </header>
         <section>
           <div class="que_text">
-            <!-- Here I've inserted question from JavaScript -->
+            
           </div>
           <div class="option_list">
-            <!-- Here I've inserted options from JavaScript -->
+            
           </div>
         </section>
-        <!-- footer of Quiz Box -->
+        
         <footer>
           <div class="total_que">
-            <!-- Here I've inserted Question Count Number from JavaScript -->
+            
           </div>
           <button class="next_btn">Next</button>
         </footer>
       </div>
-      <!-- Result Box -->
+      
       <div class="result_box">
         <div class="icon">
           <i class="fas fa-crown"></i>
         </div>
         <div class="complete_text">You've completed the Quiz!</div>
         <div class="score_text">
-          <!-- Here I've inserted Score Result from JavaScript -->
+          
         </div>
         <div class="buttons">
           <button class="restart">Restart Quiz</button>
@@ -138,9 +175,9 @@
         </div>
       </div>
     </div>
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    
     <script src="script.js"></script>
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <!-- <script class="change" ></script> -->
+    
+    
   </body>
 </html>
