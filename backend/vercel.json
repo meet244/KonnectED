@@ -1,8 +1,7 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/mybackend"
-        }
-    ]
+  "functions": {
+    "api": {
+      "entrypoint": "mybackend.py"
+    }
+  }
 }
