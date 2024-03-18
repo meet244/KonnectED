@@ -2,53 +2,52 @@
 <html lang="en">
 
 <head>
-    
-        
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gemini Chatbot</title>
+    <title>KonnectED Chatbot</title>
 
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
         rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-    
+
     <link rel="stylesheet" type="text/css" href="static/main.css">
-   </head>
+</head>
 
 
 <body>
-   
+
 
     <div class="container">
         <div class="row padded_row">
-            
+
             <div class="col-md-7">
                 <div class="chat_window">
                     <div class="top_menu">
-                        <div class="title">ChatBot - Gemini</div>
+                        <div class="title">ChatBot - KonnectED</div>
                     </div>
-                    
+
                     <ul class="messages"></ul>
-                    
+
                     <div class="bottom_wrapper">
                         <input id="msg_input" placeholder="Say Hi to begin chat..." />
                         <div id="send_button" class="app_button_1">Send</div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-5">
                 <div class="chat_window">
                     <div class="top_menu">
                         <div class="title">Help</div>
                     </div>
-                    
+
                     <div class="panel-group" id="accordion">
-                        
+
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -69,12 +68,12 @@
         </div>
     </div>
 
-    
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
     </script>
 
-    
+
     <script type="importmap">
         {
             "imports": {
@@ -83,14 +82,28 @@
         }
     </script>
 
-    
+
     <script type="module">
-        import { GoogleGenerativeAI } from "@google/generative-ai";
+        import {
+            GoogleGenerativeAI
+        } from "@google/generative-ai";
 
-        
-        const API_KEY = "###";//put ur own api key
 
-        
+        let API_KEY = "";
+
+        function getAPIKey(promt = "Please enter your API key for Gemini:") {
+            let apiKey = prompt(promt);
+            if (apiKey === "" || apiKey === null) {
+                alert("API key cannot be empty. Please enter a valid API key.");
+                return getAPIKey();
+            }
+            return apiKey;
+        }
+
+        if (API_KEY === "" || API_KEY === null) {
+            API_KEY = getAPIKey();
+        }
+
         const genAI = new GoogleGenerativeAI(API_KEY);
 
         function getCurrentTimestamp() {
@@ -118,7 +131,9 @@
             setTimeout(function () {
                 message.addClass('appeared');
             }, 0);
-            messagesContainer.animate({ scrollTop: messagesContainer.prop('scrollHeight') }, 300);
+            messagesContainer.animate({
+                scrollTop: messagesContainer.prop('scrollHeight')
+            }, 300);
         }
 
         async function showUserMessage(message, datetime) {
@@ -140,12 +155,19 @@
         async function sendUserMessage(message) {
             try {
                 let query = "you are a chatbot of KonnectED, you must work to help people to get education and help them to connect with each other to encourage social growth. your goal is to help only in field of education and social networking and coding. you must not share any personal information of any user, and dont response to any queries related to other topics.if there is no query then start with a greeting to user \n\n\n query = " + message;
-                const response = await genAI.getGenerativeModel({ model: "gemini-pro" }).generateContent(query);
+                const response = await genAI.getGenerativeModel({
+                    model: "gemini-pro"
+                }).generateContent(query);
                 const botResponse = await response.response.text();
                 await showBotMessage(botResponse);
             } catch (error) {
-                console.error("Error fetching bot response:", error);
-                await showBotMessage("I'm sorry, I couldn't process your request at the moment.");
+                console.error("Error fetching bot response:", error.message);
+                if (error.message.includes("API key not valid")) {
+                    await showBotMessage("API key is not valid. Please enter a valid API key.");
+                    apiKey = getAPIKey("API key is not valid. Please enter a valid API key.")
+                } else {
+                    await showBotMessage("I'm sorry, I couldn't process your request at the moment.");
+                }
             }
         }
 
