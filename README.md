@@ -1,11 +1,11 @@
 
-# KonnectED: Professional Growth and Learning Platform 🌱🚀
+# <img src="https://github.com/meet244/TensionFlow_ACE/assets/83262693/71553ad8-2beb-438e-8afc-e21667d0802d" width="40"> KonnectED: Professional Growth and Learning Platform 🌱🚀
 
 ### Check Out Our [Website](https://konnect-ed.vercel.app/)
 👉 [Visit KonnectED](https://konnect-ed.vercel.app/) to see our project live!
 
 ## 🎯 Problem Statement
-In the rapidly evolving digital landscape, traditional platforms offer fragmented solutions that either focus on networking or learning, but rarely both. Users, especially the younger generation, crave integrated experiences that offer both professional connections and educational value in a seamless, engaging format.
+In the rapidly evolving digital landscape, traditional platforms offer fragmented solutions focusing on networking or learning, but rarely both. Users, especially the younger generation, crave integrated experiences that offer professional connections and educational value in a seamless, engaging format.
 
 ## 🌟 Our Solution
 KonnectED bridges this gap by offering a unified solution that fosters professional growth, learning, and meaningful connections. Here are the key features:
@@ -25,6 +25,8 @@ KonnectED bridges this gap by offering a unified solution that fosters professio
 
 ## 🚀 Future Missions
 We aim to further enhance KonnectED by implementing a smart recommendation engine, enabling collaborative projects, hosting interactive live events, and improving our skill endorsement system.
+
+This project was developed as part of a hackathon. You can find more information about the hackathon and our project [here](https://google.com).
 
 ## 🤝 Contributors
 - [Meet Patel](https://github.com/meet244)
