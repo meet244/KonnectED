@@ -2,7 +2,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/backend/"
+            "dest": "/"
         }
     ]
 }
