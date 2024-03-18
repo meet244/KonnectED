@@ -26,6 +26,7 @@ KonnectED bridges this gap by offering a unified solution that fosters professio
 ## 🚀 Future Missions
 We aim to further enhance KonnectED by implementing a smart recommendation engine, enabling collaborative projects, hosting interactive live events, and improving our skill endorsement system.
 
+### About Project
 This project was developed as part of a hackathon. You can find more information about the hackathon and our project [here](https://google.com).
 
 ## 🤝 Contributors
