@@ -1,7 +1,14 @@
 {
-  "functions": {
-    "api": {
-      "entrypoint": "mybackend.py"
-    }
-  }
+    "builds": [
+        {
+            "src": "./mybackend.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
 }
