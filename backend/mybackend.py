@@ -14,6 +14,10 @@ client = MongoClient(MONGO_URI)
 db = client["mydb"]
 coll = db["users"]
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Welcome to my backend!"
+
 @app.route("/create", methods=["POST"])
 def create_user():
     user_data = {
@@ -69,4 +73,4 @@ def update_user(user_id):
 
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run()
