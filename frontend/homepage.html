@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Social - Network, Community and Event Theme</title>
+        <link rel="stylesheet" href="css\streakstyle.css">
+        <link rel="stylesheet" href="css\github-calendar-responsive.css">
+        
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            />
+        <meta
+            name="description"
+            content="Bootstrap 5 based Social Media Network and Community Theme"
+            />
+        
+        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com/" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+            />
+        
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/font-awesome/css/all.min.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/OverlayScrollbars-master/css/OverlayScrollbars.min.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/tiny-slider/dist/tiny-slider.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/choices.js/public/assets/styles/choices.min.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/glightbox-master/dist/css/glightbox.min.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/dropzone/dist/dropzone.css"
+            />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/vendor/flatpickr/dist/flatpickr.css"
+            />
+        <link rel="stylesheet" type="text/css" href="assets/vendor/plyr/plyr.css" />
+        
+        <link
+            id="style-switch"
+            rel="stylesheet"
+            type="text/css"
+            href="assets/css/style.css"
+            />
+        
+        <style>
+           .floating-button {
+    position: fixed;
+    bottom: 100px;
+    right: 37px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px;     width: 60px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 70px;     cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+   
+
+        
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;             margin: 0;
+            padding: 0;
+            }
+            #chartdiv {  
+            width: 39vw;
+            height: 350px;
+            background-color: #ffffff;             border-radius: 10px;                         overflow: hidden;             }
+            .chart-title {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333333;             }
+            .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            }
+            .legend-item {
+            margin-right: 20px;
+            font-size: 16px;
+            color: #666666;             cursor: pointer;
+            transition: color 0.3s ease;
+            }
+            .legend-item:hover {
+            color: #333333;             }
+            .amcharts-balloon {
+            font-size: 14px;
+            background-color: #ffffff;             color: #333333;             border-radius: 8px;
+            padding: 10px;
+            }
+            .amcharts-scrollbar-thumb {
+            fill: #333333;             }
+            .amcharts-export-menu-item {
+            fill: #007bff !important;             }
+        .chip {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 999px;
+            background-color: #e9ecef;
+        }
+
+        .endorse-count {
+            margin-right: 0.25rem;
+            font-weight: bold;
+        }
+
+        .endorsed {
+            background-color: #28a745 !important;
+            border-color: #28a745 !important;
+            color: #fff !important;
+        }
+
+        .endorse-button {
+            border: 1px solid transparent;
+            border-radius: 999px;
+            padding: 0.25rem 0.5rem;
+            cursor: pointer;
+        }
+
+        .endorse-button:hover {
+            border-color: #28a745;
+        }
+
+        .endorse-button.green {
+            background-color: #28a745;
+            color: #fff;
+        }
+        </style>
+        
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-GMKQ4P9YMZ"
+            ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            
+            gtag("config", "G-GMKQ4P9YMZ");
+        </script>
+    </head>
+    <body>
+        <!-- =======================
+            Header START -->
+        <header class="navbar-light fixed-top header-static bg-mode">
+            
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    
+                    <a class="navbar-brand" href="homepage.html">
+                    <img
+                        class="light-mode-item navbar-brand-item"
+                        src="assets/images/logo.svg"
+                        alt="logo"
+                        />
+                    <img
+                        class="dark-mode-item navbar-brand-item"
+                        src="assets/images/logo.svg"
+                        alt="logo"
+                        />
+                    </a>
+                    
+                    
+                    <button
+                        class="navbar-toggler ms-auto icon-md btn btn-light p-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse"
+                        aria-controls="navbarCollapse"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        >
+                    <span class="navbar-toggler-animation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        
+                        <div
+                            class="nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0"
+                            >
+                            <div class="nav-item w-100">
+                                <form class="rounded position-relative">
+                                    <input
+                                        class="form-control ps-5 bg-light"
+                                        type="search"
+                                        placeholder="Search..."
+                                        aria-label="Search"
+                                        />
+                                    <button
+                                        class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y"
+                                        type="submit"
+                                        >
+                                    <i class="bi bi-search fs-5"> </i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <ul class="navbar-nav navbar-nav-scroll ms-auto">
+                            
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="videosmain.html">Start Learning</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="network.html">Manage Network</a>
+            
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="settings.html">Settings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                    <ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
+                        <li class="nav-item ms-2">
+                            <a class="nav-link icon-md btn btn-light p-0" href="settings.html">
+                            <i class="bi bi-gear-fill fs-6"> </i>
+                            </a>
+                        </li>
+                       
+                                
+                                <li>
+                                    <div class="modeswitch-wrap" id="darkModeSwitch">
+                                        <div class="modeswitch-item">
+                                            <div class="modeswitch-icon"></div>
+                                        </div>
+                                        <span>Dark mode</span>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            </nav>
+            
+        </header>
+        <!-- =======================
+            Header END -->
+        
+        <main>
+            
+            <div class="container">
+                <div class="row g-4">
+                    
+                    <div class="col-lg-3">
+                        
+                        <div class="d-flex align-items-center d-lg-none">
+                            <button
+                                class="border-0 bg-transparent"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasSideNavbar"
+                                aria-controls="offcanvasSideNavbar"
+                                >
+                            <i class="btn btn-primary fw-bold fa-solid fa-sliders-h"></i>
+                            <span class="h6 mb-0 fw-bold d-lg-none ms-2">My profile</span>
+                            </button>
+                        </div>
+                        
+                        
+                        <nav class="navbar navbar-expand-lg mx-0">
+                            <div
+                                class="offcanvas offcanvas-start"
+                                tabindex="-1"
+                                id="offcanvasSideNavbar"
+                                >
+                                
+                                <div class="offcanvas-header">
+                                    <button
+                                        type="button"
+                                        class="btn-close text-reset ms-auto"
+                                        data-bs-dismiss="offcanvas"
+                                        aria-label="Close"
+                                        ></button>
+                                </div>
+                                
+                                <div class="offcanvas-body d-block px-2 px-lg-0">
+                                    
+                                    <div class="card overflow-hidden">
+                                        
+                                        <div
+                                            class="h-50px"
+                                            style="
+                                            background-image: url(assets/images/bg/01.jpg);
+                                            background-position: center;
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            "
+                                            ></div>
+                                        
+                                        <div class="card-body pt-0">
+                                            <div class="text-center">
+                                                
+                                                <div class="avatar avatar-lg mt-n5 mb-3">
+                                                    <img
+                                                    id="image"
+                                                        class="avatar-img rounded border border-white border-3"
+                                                        src=""
+                                                        alt=""
+                                                        />
+                                                </div>
+                                                
+                                                <h5 class="mb-0" id="name">Jay Patel</h5>
+                                                <small id="subtitle">Web Developer at Google</small>
+                                                <p class="mt-3" id="quote">
+                                                    I'd love to change the world, but they won’t give me
+                                                    the source code.
+                                                </p>
+                                                
+                                                <div
+                                                    class="hstack gap-2 gap-xl-3 justify-content-center"
+                                                    >
+                                                    
+                                                    <div>
+                                                        <h6 class="mb-0" id="posts_count">26</h6>
+                                                        <small>Posts</small>
+                                                    </div>
+                                                    
+                                                    <div class="vr"></div>
+                                                    
+                                                    <div>
+                                                        <h6 class="mb-0" id="followers_count">250+</h6>
+                                                        <small>Followers</small>
+                                                    </div>
+                                                    
+                                                    <div class="vr"></div>
+                                                    
+                                                    <div>
+                                                        <h6 class="mb-0" id="koins_count">38</h6>
+                                                        <small>Koins</small>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <hr />
+                                            
+                                            <button id="edit" class="btn btn-primary-soft me-2 w-100" type="button" onclick="window.location.href = 'settings.html'">
+                                                <i class="bi bi-pencil-fill pe-1"></i> Edit profile
+                                            </button>
+                                            
+                                            
+                                            <div class="mb-3"></div>
+                                            <h5 class="card-title">About</h5>
+                                            
+                                            
+                                            
+                                            
+                                            <p id="about">
+                                                I am a web developer at Google. I've worked as full stack developer for more than 5 years. I love to work on new projects and learn new things.
+                                            </p>
+                                            
+                                            <ul class="list-unstyled mt-3 mb-0">
+                                                <li class="mb-2">
+                                                    <i class="bi bi-calendar-date fa-fw pe-1"></i> Born:
+                                                    <strong id="born"> October 20, 1990 </strong>
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-briefcase fa-fw pe-1"></i> Experience:
+                                                    <strong id="exp"> 3+ yrs at Google </strong>
+                                                </li>
+                                                <li>
+                                                    <i class="bi bi-envelope fa-fw pe-1"></i> Email:
+                                                    <strong id="email"> jaypatel@gmail.com </strong>
+                                                </li>
+                                            </ul>
+                                            
+                                            
+                                            <hr />
+                                            
+                                            
+                                            <h5 class="card-title d-inline">Experience</h5>
+                                            <a id="edit2"
+                                                class="btn btn-primary-soft btn-sm ms-2"
+                                                href="#!"
+                                                style="margin-left: 10px"
+                                                >
+                                                <i class="fa-solid fa-plus" style="width: 1em; height: 1em;"></i>
+                                            </a>
+
+                                            <h5 class="card-title d-inline" id="experience">Experience</h5>
+                                            
+                                            
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </nav>
+                        
+                    </div>
+                    
+                    
+                    <div class="col-md-8 col-lg-6 vstack gap-2" >
+                        <div class="card" style="width: 100%; height: 120px;">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="avatar avatar-xs me-2">
+                                        <a href="#"><img class="avatar-img rounded-circle" id="image2" src="" alt=""></a>
+                                    </div>
+                                    <form class="w-100">
+                                        <textarea class="form-control pe-4 border-0" data-autoresize placeholder="Share your knowledge with the world!"></textarea>
+                                    </form>
+                                </div>
+                                <ul class="nav nav-pills nav-stack small fw-normal" style="margin-top: -10px;">
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-light py-1 px-2 mb-0" href="#!" data-bs-toggle="modal" data-bs-target="#feedActionPhoto"><i class="bi bi-image-fill text-success pe-2"></i>Photo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link bg-light py-1 px-2 mb-0" href="#!" data-bs-toggle="modal" data-bs-target="#feedActionVideo"><i class="bi bi-camera-reels-fill text-info pe-2"></i>Video</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center p-2">
+                                <div>
+                                    <h5 class="card-title mb-0" style="padding-inline-start: 10px;padding-top: 10px; margin-bottom: 10px;">📈 Insights</h5>
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center p-2">
+                                <div>
+                                    <h5 class="card-title mb-0" style="padding-inline-start: 10px;padding-top: 10px;">🔥Streaks</h5>
+                                    <img src="https://raw.githubusercontent.com/rudraparmar76/rudraparmar76/b3a7f7f6faeaaf8d482982b6bc2b2430416d9808/Contribution_Snake.svg" alt="Contribution Snake" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h5 style="margin-top: 5px;margin-left:3px;" id="edit3">🕜 History</h5>
+                        <div class="tiny-slider arrow-hover overflow-hidden">
+                            <div class="tiny-slider-inner ms-n4" data-arrow="true" data-dots="true" data-loop="false" data-autoplay="false" data-items-xl="4" data-items-lg="3" data-items-md="3" data-items-sm="3" data-items-xs="2" data-gutter="12" data-edge="30">
+                                
+                                
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Array.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank"  href="Quiz/homepage.html?id=1" class="stretched-link text-white small"
+                                                    >Arrays</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Binary\ Search.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank"  href="Quiz/homepage.html?id=4" class="stretched-link text-white small"
+                                                    >Binary Search</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Graphs.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank"  href="Quiz/homepage.html?id=5" class="stretched-link text-white small"
+                                                    >Graphs</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Heap.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank" href="Quiz/homepage.html?id=2" class="stretched-link text-white small"
+                                                    >Heap Sort</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Linked\ List.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank"  href="Quiz/homepage.html?id=6" class="stretched-link text-white small"
+                                                    >Linked List</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Queue.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank" href="Quiz/homepage.html?id=7" class="stretched-link text-white small"
+                                                    >Queue</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    
+                                    <div
+                                        class="card card-overlay-bottom border-0 position-relative h-200px"
+                                        style="
+                                        background-image: url(Thumbnail/Stack.png);
+                                        background-position: center left;
+                                        background-size: cover;
+                                        "
+                                        >
+                                        <div class="card-img-overlay d-flex align-items-center p-2">
+                                            <div class="w-100 mt-auto">
+                                                
+                                                <a target="_blank" href="Quiz/homepage.html?id=3" class="stretched-link text-white small"
+                                                    >Stack</a
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                    
+                    <div class="col-lg-3">
+                        <div class="row g-4">
+                            
+                            <div class="col-sm-6 col-lg-12">
+                                <div class="card">
+                                    
+                                    <div class="card-header pb-0 border-0">
+                                        <h5 class="card-title mb-0">Who to follow</h5>
+                                    </div>
+                                    
+                                    
+                                    <div class="card-body">
+                                        
+                                        <div class="hstack gap-2 mb-3">
+                                            
+                                            <div class="avatar">
+                                                <a href="homepage.html?id=dbf87d73659f4b39a18d18942f3e2c1b">
+                                                    <img class="avatar-img rounded-circle" src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="overflow-hidden">
+                                                <a class="h6 mb-0" href="homepage.html?id=dbf87d73659f4b39a18d18942f3e2c1b">Aarav Mehta</a>
+                                                <p class="mb-0 small text-truncate">News anchor</p>
+                                            </div>
+                                            
+                                            <a id="toggleButton1" class="btn btn-primary-soft rounded-circle icon-md ms-auto toggleButton" href="#">
+                                                <i id="toggleIcon1" class="fa-solid fa-plus"></i>
+                                            </a>
+                                        </div>
+                                        
+                                        
+                                        <div class="hstack gap-2 mb-3">
+                                            
+                                            <div class="avatar">
+                                                <a href="homepage.html?id=9b6eafab1f4f4fd0b4f7490c8bb4dd77">
+                                                    <img class="avatar-img rounded-circle" src="https://www.hagopsphotography.com/wp-content/uploads/2021/10/Female-LinkedIn-portrait.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="overflow-hidden">
+                                                <a class="h6 mb-0" href="homepage.html?id=9b6eafab1f4f4fd0b4f7490c8bb4dd77">Aaradhya Sharma </a>
+                                                <p class="mb-0 small text-truncate">Web Developer</p>
+                                            </div>
+                                            
+                                            <a id="toggleButton2" class="btn btn-primary-soft rounded-circle icon-md ms-auto toggleButton" href="#">
+                                                <i id="toggleIcon2" class="fa-solid fa-plus"></i>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            
+          <div class="col-sm-6 col-lg-12">
+            <div class="card">
+              
+              <div class="container mt-5">
+               
+                  
+                  <h5 class="card-title">Skills</h5>
+                  <h5 class="card-title" id="skills">Skills</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        
+            <script>
+                
+                function endorse(button) {
+                    var countSpan = button.nextElementSibling;
+                    var currentCount = parseInt(countSpan.textContent.trim());
+        
+                    
+                    if (button.classList.contains('green')) {
+                        
+                        countSpan.textContent = ' 0';
+                        button.classList.remove('green');
+                    } else {
+                        
+                        countSpan.textContent = ' ' + (currentCount + 1);
+                        button.classList.add('green');
+                    }
+                }
+            </script>
+        
+                    
+                </div>
+                
+            </div>
+            
+        </main>
+        
+        
+        <div class="d-none d-lg-block">
+            
+            <button class="floating-button" onclick="openChatbot()">
+                <i class="fas fa-robot"></i>
+            </button>
+            
+                <script>
+                                        function openChatbot() {
+                        window.open('chatbot-frontend/bot.html');
+                    }
+                </script>
+            </button>
+            <a
+                class="icon-md btn btn-primary position-fixed end-0 bottom-0 me-5 mb-5"
+                data-bs-toggle="offcanvas"
+                href="#offcanvasChat"
+                role="button"
+                aria-controls="offcanvasChat"
+                >
+            <i class="bi bi-chat-left-text-fill"></i>
+            </a>
+            
+            <div
+                class="offcanvas offcanvas-end"
+                data-bs-scroll="true"
+                data-bs-backdrop="false"
+                tabindex="-1"
+                id="offcanvasChat"
+                >
+                
+                <div class="offcanvas-header d-flex justify-content-between">
+                    <h5 class="offcanvas-title">Messaging</h5>
+                    <div class="d-flex">
+                        
+                        <a href="#" class="btn btn-secondary-soft-hover py-1 px-2">
+                        <i class="bi bi-pencil-square"></i>
+                        </a>
+                        
+                        <div class="dropdown">
+                            <a
+                                href="#"
+                                class="btn btn-secondary-soft-hover py-1 px-2"
+                                id="chatAction"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                >
+                            <i class="bi bi-three-dots"></i>
+                            </a>
+                            
+                            <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="chatAction"
+                                >
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <i class="bi bi-check-square fa-fw pe-2"></i>Mark all as
+                                    read</a
+                                        >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <i class="bi bi-gear fa-fw pe-2"></i>Chat setting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <i class="bi bi-bell fa-fw pe-2"></i>Disable
+                                    notifications</a
+                                        >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <i class="bi bi-volume-up-fill fa-fw pe-2"></i>Message
+                                    sounds</a
+                                        >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <i class="bi bi-slash-circle fa-fw pe-2"></i>Block
+                                    setting</a
+                                        >
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <i class="bi bi-people fa-fw pe-2"></i>Create a group
+                                    chat</a
+                                        >
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        
+                        <a
+                            href="#"
+                            class="btn btn-secondary-soft-hover py-1 px-2"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                            >
+                        <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="offcanvas-body pt-0 custom-scrollbar">
+                    
+                    <form class="rounded position-relative">
+                        <input
+                            class="form-control ps-5 bg-light"
+                            type="search"
+                            placeholder="Search..."
+                            aria-label="Search"
+                            />
+                        <button
+                            class="btn bg-transparent px-3 py-0 position-absolute top-50 start-0 translate-middle-y"
+                            type="submit"
+                            >
+                        <i class="bi bi-search fs-5"> </i>
+                        </button>
+                    </form>
+                    
+                    <ul class="list-unstyled">
+                        
+                        <li
+                            class="mt-3 hstack gap-3 align-items-center position-relative toast-btn"
+                            data-target="chatToast"
+                            >
+                            
+                            <div class="avatar status-online">
+                                <img
+                                    class="avatar-img rounded-circle"
+                                    src="assets/images/avatar/01.jpg"
+                                    alt=""
+                                    />
+                            </div>
+                            
+                            <div class="overflow-hidden">
+                                <a class="h6 mb-0 stretched-link" href="#!"
+                                    >Jeet Phuria
+                                </a>
+                                <div class="small text-secondary text-truncate">
+                                    send feedback ASAP
+                                </div>
+                            </div>
+                            
+                            <div class="small ms-auto text-nowrap">Just now</div>
+                        </li>
+                        
+                        <li
+                            class="mt-3 hstack gap-3 align-items-center position-relative toast-btn"
+                            data-target="chatToast2"
+                            >
+                            
+                            <div class="avatar status-online">
+                                <img
+                                    class="avatar-img rounded-circle"
+                                    src="assets/images/avatar/02.jpg"
+                                    alt=""
+                                    />
+                            </div>
+                            
+                            <div class="overflow-hidden">
+                                <a class="h6 mb-0 stretched-link" href="#!">Sarah Mehta </a>
+                                <div class="small text-secondary text-truncate">
+                                    Please find attached 🙏🏻 
+                                </div>
+                            </div>
+                            
+                            <div class="small ms-auto text-nowrap">1min</div>
+                        </li>
+                        
+                        <li class="mt-3 hstack gap-3 align-items-center position-relative">
+                           
+                          
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div aria-live="polite" aria-atomic="true" class="position-relative">
+                <div class="toast-container toast-chat d-flex gap-3 align-items-end">
+                    
+                    <div
+                        id="chatToast"
+                        class="toast mb-0 bg-mode"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                        data-bs-autohide="false"
+                        >
+                        <div class="toast-header bg-mode">
+                            
+                            <div
+                                class="d-flex justify-content-between align-items-center w-100"
+                                >
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 avatar me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/01.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 mt-1">Frances Guerrero</h6>
+                                        <div class="small text-secondary">
+                                            <i class="fa-solid fa-circle text-success me-1"></i>Online
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary-soft-hover py-1 px-2"
+                                            href="#"
+                                            id="chatcoversationDropdown"
+                                            data-bs-toggle="dropdown"
+                                            data-bs-auto-close="outside"
+                                            aria-expanded="false"
+                                            ><i class="bi bi-three-dots-vertical"></i
+                                            ></a>
+                                        <ul
+                                            class="dropdown-menu dropdown-menu-end"
+                                            aria-labelledby="chatcoversationDropdown"
+                                            >
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-camera-video me-2 fw-icon"></i>Video
+                                                call</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-telephone me-2 fw-icon"></i>Audio
+                                                call</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-trash me-2 fw-icon"></i>Delete
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-chat-square-text me-2 fw-icon"></i
+                                                    >Mark as unread</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-volume-up me-2 fw-icon"></i>Muted</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-archive me-2 fw-icon"></i>Archive</a
+                                                    >
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-flag me-2 fw-icon"></i>Report</a
+                                                    >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <a
+                                        class="btn btn-secondary-soft-hover py-1 px-2"
+                                        data-bs-toggle="collapse"
+                                        href="#collapseChat"
+                                        aria-expanded="false"
+                                        aria-controls="collapseChat"
+                                        ><i class="bi bi-dash-lg"></i
+                                        ></a>
+                                    <button
+                                        class="btn btn-secondary-soft-hover py-1 px-2"
+                                        data-bs-dismiss="toast"
+                                        aria-label="Close"
+                                        >
+                                    <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="toast-body collapse show" id="collapseChat">
+                            
+                            <div class="chat-conversation-content custom-scrollbar h-200px">
+                                
+                                <div class="text-center small my-2">Jul 16, 2022, 06:15 am</div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/01.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-2 px-3 rounded-2">
+                                                    Applauded no discovery😊
+                                                </div>
+                                                <div class="small my-2">6:15 AM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-end text-end mb-1">
+                                    <div class="w-100">
+                                        <div class="d-flex flex-column align-items-end">
+                                            <div class="bg-primary text-white p-2 px-3 rounded-2">
+                                                With pleasure
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/01.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-2 px-3 rounded-2">
+                                                    Please find the attached
+                                                </div>
+                                                
+                                                
+                                                <div class="small my-2">12:16 PM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/01.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-2 px-3 rounded-2">
+                                                    How promotion excellent curiosity😮
+                                                </div>
+                                                <div class="small my-2">3:22 PM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-end text-end mb-1">
+                                    <div class="w-100">
+                                        <div class="d-flex flex-column align-items-end">
+                                            <div class="bg-primary text-white p-2 px-3 rounded-2">
+                                                And sir dare view.
+                                            </div>
+                                            
+                                            <div class="d-flex my-2">
+                                                <div class="small text-secondary">5:35 PM</div>
+                                                <div class="small ms-2">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center small my-2">2 New Messages</div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/01.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-3 rounded-2">
+                                                    <div class="typing d-flex align-items-center">
+                                                        <div class="dot"></div>
+                                                        <div class="dot"></div>
+                                                        <div class="dot"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mt-2">
+                                
+                                <textarea
+                                    class="form-control mb-sm-0 mb-3"
+                                    placeholder="Type a message"
+                                    rows="1"
+                                    ></textarea>
+                                
+                                <div class="d-sm-flex align-items-end mt-2">
+                                    <button class="btn btn-sm btn-danger-soft me-2">
+                                    <i class="fa-solid fa-face-smile fs-6"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary-soft me-2">
+                                    <i class="fa-solid fa-paperclip fs-6"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-success-soft me-2">Gif</button>
+                                    <button class="btn btn-sm btn-primary ms-auto">Send</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div
+                        id="chatToast2"
+                        class="toast mb-0 bg-mode"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                        data-bs-autohide="false"
+                        >
+                        <div class="toast-header bg-mode">
+                            
+                            <div
+                                class="d-flex justify-content-between align-items-center w-100"
+                                >
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 avatar me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/02.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 mt-1">Lori Ferguson</h6>
+                                        <div class="small text-secondary">
+                                            <i class="fa-solid fa-circle text-success me-1"></i>Online
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    
+                                    <div class="dropdown">
+                                        <a
+                                            class="btn btn-secondary-soft-hover py-1 px-2"
+                                            href="#"
+                                            id="chatcoversationDropdown2"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            data-bs-auto-close="outside"
+                                            aria-expanded="false"
+                                            ><i class="bi bi-three-dots-vertical"></i
+                                            ></a>
+                                        <ul
+                                            class="dropdown-menu dropdown-menu-end"
+                                            aria-labelledby="chatcoversationDropdown2"
+                                            >
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-camera-video me-2 fw-icon"></i>Video
+                                                call</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-telephone me-2 fw-icon"></i>Audio
+                                                call</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-trash me-2 fw-icon"></i>Delete
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-chat-square-text me-2 fw-icon"></i
+                                                    >Mark as unread</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-volume-up me-2 fw-icon"></i>Muted</a
+                                                    >
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-archive me-2 fw-icon"></i>Archive</a
+                                                    >
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#"
+                                                    ><i class="bi bi-flag me-2 fw-icon"></i>Report</a
+                                                    >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <a
+                                        class="btn btn-secondary-soft-hover py-1 px-2"
+                                        data-bs-toggle="collapse"
+                                        href="#collapseChat2"
+                                        role="button"
+                                        aria-expanded="false"
+                                        aria-controls="collapseChat2"
+                                        ><i class="bi bi-dash-lg"></i
+                                        ></a>
+                                    <button
+                                        class="btn btn-secondary-soft-hover py-1 px-2"
+                                        data-bs-dismiss="toast"
+                                        aria-label="Close"
+                                        >
+                                    <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="toast-body collapse show" id="collapseChat2">
+                            
+                            <div class="chat-conversation-content custom-scrollbar h-200px">
+                                
+                                <div class="text-center small my-2">Jul 16, 2022, 06:15 am</div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/02.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-2 px-3 rounded-2">
+                                                    Applauded no discovery😊
+                                                </div>
+                                                <div class="small my-2">6:15 AM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-end text-end mb-1">
+                                    <div class="w-100">
+                                        <div class="d-flex flex-column align-items-end">
+                                            <div class="bg-primary text-white p-2 px-3 rounded-2">
+                                                With pleasure
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/02.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-2 px-3 rounded-2">
+                                                    Please find the attached
+                                                </div>
+                                                
+                                                
+                                                <div class="small my-2">12:16 PM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/02.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-2 px-3 rounded-2">
+                                                    How promotion excellent curiosity😮
+                                                </div>
+                                                <div class="small my-2">3:22 PM</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-end text-end mb-1">
+                                    <div class="w-100">
+                                        <div class="d-flex flex-column align-items-end">
+                                            <div class="bg-primary text-white p-2 px-3 rounded-2">
+                                                And sir dare view.
+                                            </div>
+                                            
+                                            <div class="d-flex my-2">
+                                                <div class="small text-secondary">5:35 PM</div>
+                                                <div class="small ms-2">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center small my-2">2 New Messages</div>
+                                
+                                <div class="d-flex mb-1">
+                                    <div class="flex-shrink-0 avatar avatar-xs me-2">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/02.jpg"
+                                            alt=""
+                                            />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="w-100">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="bg-light text-secondary p-3 rounded-2">
+                                                    <div class="typing d-flex align-items-center">
+                                                        <div class="dot"></div>
+                                                        <div class="dot"></div>
+                                                        <div class="dot"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="mt-2">
+                                
+                                <textarea
+                                    class="form-control mb-sm-0 mb-3"
+                                    placeholder="Type a message"
+                                    rows="1"
+                                    ></textarea>
+                                
+                                <div class="d-sm-flex align-items-end mt-2">
+                                    <button class="btn btn-sm btn-danger-soft me-2">
+                                    <i class="fa-solid fa-face-smile fs-6"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary-soft me-2">
+                                    <i class="fa-solid fa-paperclip fs-6"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-success-soft me-2">Gif</button>
+                                    <button class="btn btn-sm btn-primary ms-auto">Send</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div
+            class="modal fade"
+            id="modalCreateFeed"
+            tabindex="-1"
+            aria-labelledby="modalLabelCreateFeed"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabelCreateFeed">Create post</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            ></button>
+                    </div>
+                    
+                    
+                    <div class="modal-body">
+                        
+                        <div class="d-flex mb-3">
+                            
+                            <div class="avatar avatar-xs me-2">
+                                <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="">
+                            </div>
+                            
+                            <form class="w-100">
+                                <textarea class="form-control pe-4 fs-3 lh-1 border-0" rows="4" placeholder="Upload your teaching videos" autofocus></textarea>
+                            </form>
+                        </div>
+                        
+                        <div class="hstack gap-2">
+                            <a class="icon-md bg-success bg-opacity-10 text-success rounded-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Photo"> <i class="bi bi-image-fill"></i> </a>
+                            <a class="icon-md bg-info bg-opacity-10 text-info rounded-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Video"> <i class="bi bi-camera-reels-fill"></i> </a>
+                            <a class="icon-md bg-danger bg-opacity-10 text-danger rounded-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Events"> <i class="bi bi-calendar2-event-fill"></i> </a>
+                            <a class="icon-md bg-warning bg-opacity-10 text-warning rounded-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Feeling/Activity"> <i class="bi bi-emoji-smile-fill"></i> </a>
+                            <a class="icon-md bg-light text-secondary rounded-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Check in"> <i class="bi bi-geo-alt-fill"></i> </a>
+                            <a class="icon-md bg-primary bg-opacity-10 text-primary rounded-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Tag people on top"> <i class="bi bi-tag-fill"></i> </a>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="modal-footer row justify-content-between">
+                        
+                        <div class="col-lg-3">
+                            <select
+                                class="form-select js-choice choice-select-text-none"
+                                data-position="top"
+                                data-search-enabled="false"
+                                >
+                                <option value="PB">Public</option>
+                                <option value="PV">Friends</option>
+                                <option value="PV">Only me</option>
+                                <option value="PV">Custom</option>
+                            </select>
+                            
+                        </div>
+                        <div class="col-lg-8 text-sm-end">
+                            <button type="button" class="btn btn-danger-soft me-2">
+                            <i class="bi bi-camera-video-fill pe-1"></i> Live video
+                            </button>
+                            <button type="button" class="btn btn-success-soft">Post</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div
+            class="modal fade"
+            id="feedActionPhoto"
+            tabindex="-1"
+            aria-labelledby="feedActionPhotoLabel"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="feedActionPhotoLabel">
+                            Add post photo
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            ></button>
+                    </div>
+                    
+                    
+                    <div class="modal-body">
+                        
+                        <div class="d-flex mb-3">
+                            
+                            <div class="avatar avatar-xs me-2">
+                                <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="">
+                            </div>
+                            
+                            <form class="w-100">
+                                <textarea class="form-control pe-4 fs-3 lh-1 border-0" rows="2" placeholder="Upload your Teaching Materials"></textarea>
+                            </form>
+                        </div>
+                        
+                        <div>
+                            <label class="form-label">Upload attachment</label>
+                            <div
+                                class="dropzone dropzone-default card shadow-none"
+                                data-dropzone='{"maxFiles":2}'
+                                >
+                                <div class="dz-message">
+                                    <i class="bi bi-images display-3"></i>
+                                    <p>Drag here or click to upload photo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="modal-footer">
+                        
+                        <button
+                            type="button"
+                            class="btn btn-danger-soft me-2"
+                            data-bs-dismiss="modal"
+                            >
+                        Cancel
+                        </button>
+                        <button type="button" class="btn btn-success-soft">Post</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div
+            class="modal fade"
+            id="feedActionVideo"
+            tabindex="-1"
+            aria-labelledby="feedActionVideoLabel"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="feedActionVideoLabel">
+                            Add post video
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            ></button>
+                    </div>
+                    
+                    
+                    <div class="modal-body">
+                        
+                        <div class="d-flex mb-3">
+                            
+                            <div class="avatar avatar-xs me-2">
+                                <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="">
+                            </div>
+                            
+                            <form class="w-100">
+                                <textarea class="form-control pe-4 fs-3 lh-1 border-0" rows="2" placeholder="Upload your Teaching Materials"></textarea>
+                            </form>
+                        </div>
+                        
+                        <div>
+                            <label class="form-label">Upload attachment</label>
+                            <div
+                                class="dropzone dropzone-default card shadow-none"
+                                data-dropzone='{"maxFiles":2}'
+                                >
+                                <div class="dz-message">
+                                    <i class="bi bi-camera-reels display-3"></i>
+                                    <p>Drag here or click to upload video.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="modal-footer">
+                        
+                        <button type="button" class="btn btn-success-soft">Post</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div
+            class="modal fade"
+            id="modalCreateEvents"
+            tabindex="-1"
+            aria-labelledby="modalLabelCreateAlbum"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabelCreateAlbum">Create event</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            ></button>
+                    </div>
+                    
+                    
+                    <div class="modal-body">
+                        
+                        <form class="row g-4">
+                            
+                            <div class="col-12">
+                                <label class="form-label">Title</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Event name here"
+                                    />
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea
+                                    class="form-control"
+                                    rows="2"
+                                    placeholder="Ex: topics, schedule, etc."
+                                    ></textarea>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <label class="form-label">Date</label>
+                                <input
+                                    type="text"
+                                    class="form-control flatpickr"
+                                    placeholder="Select date"
+                                    />
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <label class="form-label">Time</label>
+                                <input
+                                    type="text"
+                                    class="form-control flatpickr"
+                                    data-enableTime="true"
+                                    data-noCalendar="true"
+                                    placeholder="Select time"
+                                    />
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <label class="form-label">Duration</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="1hr 23m"
+                                    />
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label">Location</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Logansport, IN 46947"
+                                    />
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label">Add guests</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Guest email"
+                                    />
+                            </div>
+                            
+                            <div class="col-12 mt-3">
+                                <ul class="avatar-group list-unstyled align-items-center mb-0">
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/01.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/02.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/03.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/04.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/05.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/06.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="avatar avatar-xs">
+                                        <img
+                                            class="avatar-img rounded-circle"
+                                            src="assets/images/avatar/07.jpg"
+                                            alt="avatar"
+                                            />
+                                    </li>
+                                    <li class="ms-3">
+                                        <small> +50 </small>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                            <div>
+                                <label class="form-label">Upload attachment</label>
+                                <div
+                                    class="dropzone dropzone-default card shadow-none"
+                                    data-dropzone='{"maxFiles":2}'
+                                    >
+                                    <div class="dz-message">
+                                        <i class="bi bi-file-earmark-text display-3"></i>
+                                        <p>
+                                            Drop presentation and document here or click to upload.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-danger-soft me-2"
+                            data-bs-dismiss="modal"
+                            >
+                        Cancel
+                        </button>
+                        <button type="button" class="btn btn-success-soft">
+                        Create now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- =======================
+            JS libraries, plugins and custom scripts -->
+        
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script src="assets/vendor/tiny-slider/dist/tiny-slider.js"></script>
+        <script src="assets/vendor/OverlayScrollbars-master/js/OverlayScrollbars.min.js"></script>
+        <script src="assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+        <script src="assets/vendor/glightbox-master/dist/js/glightbox.min.js"></script>
+        <script src="assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+        <script src="assets/vendor/plyr/plyr.js"></script>
+        <script src="assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+        
+        <script src="assets/js/functions.js"></script>
+        
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/lang/en_US.js"></script>
+        <script>
+            
+            var chartData = [
+                {
+                    "date": "2024-03-01",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-03-08",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-03-15",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                
+                {
+                    "date": "2024-03-22",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-03-29",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-04-05",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-04-12",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-04-19",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-04-26",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                },
+                {
+                    "date": "2024-05-03",
+                    "weeklyPoints": Math.floor(Math.random() * 1000) + 1,
+                    "studiedTime": Math.floor(Math.random() * 1000) + 1,
+                    "quizzesSolved": Math.floor(Math.random() * 100) + 1
+                }
+            ];
+            
+            
+            var chart = am4core.create("chartdiv", am4charts.XYChart);
+            chart.paddingRight = 20;
+            
+            
+            chart.data = chartData;
+            
+            
+            var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+            dateAxis.renderer.grid.template.location = 0;
+            dateAxis.renderer.minGridDistance = 50;
+            dateAxis.title.text = "Date";
+            
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            valueAxis.title.text = "Points/Studied Time/Quizzes Solved";
+            
+            
+            function createSeries(field, name) {
+              var series = chart.series.push(new am4charts.LineSeries());
+              series.dataFields.valueY = field;
+              series.dataFields.dateX = "date";
+              series.name = name;
+              series.tooltipText = "{name}: [bold]{valueY}[/]";
+              series.strokeWidth = 4; 
+            
+              var bullet = series.bullets.push(new am4charts.CircleBullet());
+              bullet.circle.stroke = am4core.color("#fff");
+              bullet.circle.strokeWidth = 4;
+            
+              return series;
+            }
+            
+            createSeries("weeklyPoints", "Weekly Points");
+            createSeries("studiedTime", "Studied Time (minutes)");
+            createSeries("quizzesSolved", "Quizzes Solved");
+            
+            
+            chart.legend = new am4charts.Legend();
+            chart.legend.position = "top";
+            chart.legend.labels.template.text = "[bold {color}]{name}[/]";
+            
+            
+            chart.cursor = new am4charts.XYCursor();
+            
+            
+            
+            
+            chart.exporting.menu = new am4core.ExportMenu();
+            
+            
+            chart.responsive.enabled = true;
+            chart.responsive.useDefault = false;
+        </script>
+
+        
+        <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggleButton');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonId = button.id;
+            const icon = document.getElementById('toggleIcon' + buttonId.substring(11)); 
+            if (icon.classList.contains('fa-plus')) {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-check');
+            } else {
+                icon.classList.remove('fa-check');
+                icon.classList.add('fa-plus');
+            }
+        });
+    });
+});
+
+        var isself = true;
+
+        async function fetchData() {
+            try {
+
+                
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const id = urlParams.get('id');
+
+                console.log(id);
+
+                var url  = '';
+                if (id != null) {
+                    url = "https://konnect-ed.vercel.app/user/" + id;
+                    isself = false;
+                } else {
+                    
+                    url = "https://konnect-ed.vercel.app/read1";
+                }
+
+                let response = await fetch(url, { 
+                    method: "GET",
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+
+                let data = await response.json(); 
+
+                
+                if (!data) {
+                    throw new Error("Failed to parse response data");
+                }
+                console.log(data);
+
+                
+                document.getElementById("name").innerText = data['name'];
+                document.getElementById("subtitle").innerText = data['subtitle'];
+                document.getElementById("about").innerText = data['about'];
+                document.getElementById("email").innerText = data['email'];
+                document.getElementById("quote").innerText = data['quote'];
+
+                
+                let experienceList = document.getElementById("experience");
+                experienceList.innerHTML = ""; 
+
+                data['experience'].forEach((experience) => {
+                    let listItem = document.createElement("div");
+                    listItem.classList.add("d-flex");
+                    listItem.innerHTML = `
+                        <div class="avatar me-3">
+                            <a href="#!">
+                                <img class="avatar-img rounded-circle" src="assets/images/logo/08.svg" alt="" />
+                            </a>
+                        </div>
+                        <div>
+                            <h6 class="card-title mb-0">
+                                <a href="#!" style="font-size: 14px;">${experience['company']}</a>
+                            </h6>
+                            <p class="small" style="font-size: 12px;">
+                                ${experience['duration']}
+                                <a class="btn btn-primary-soft btn-xs ms-2 editclass" href="#!" id="edit1">Edit</a>
+                            </p>
+                        </div>
+                    `;
+                    experienceList.appendChild(listItem);
+                });
+
+                
+                let skillsList = document.getElementById("skills");
+                skillsList.innerHTML = ""; 
+
+
+                
+                data['skills'].forEach((skill) => {
+                    let listItem = document.createElement("div");
+                    listItem.classList.add("col-12");
+                    listItem.innerHTML = `
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-laptop me-2"></i>
+                            <span class="small">${skill}</span>
+                            <div class="ms-auto d-flex align-items-center">
+                                <button class="endorse-button btn-sm editclass" onclick="endorse(this)">Endorse</button>
+                                <span class="endorse-count small" id="${skill.toLowerCase()}-count"> 0</span>
+                            </div>
+                        </div>
+                    `;
+                    skillsList.appendChild(listItem);
+
+                
+                document.getElementById("image").src = data['image'];
+                document.getElementById("image2").src = data['image'];
+                
+                });
+
+
+
+                
+                if (isself) {
+                    document.getElementById("edit").style.display = "block";
+                    document.getElementById("edit2").style.display = "block";
+                    let editElements = document.getElementsByClassName("editclass");
+                    for (let i = 0; i < editElements.length; i++) {
+                        editElements[i].style.display = "none";
+                    }
+                    document.getElementById("edit3").innerText = "🕜 History";
+                    
+                } else {
+                    document.getElementById("edit").style.display = "none";
+                    document.getElementById("edit2").style.display = "none";
+                    let editElements = document.getElementsByClassName("editclass");
+                    for (let i = 0; i < editElements.length; i++) {
+                        editElements[i].style.display = "block";
+                    }
+                    document.getElementById("edit3").innerText = " Suggested";
+                }
+
+
+
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        fetchData();
+        </script>
+    </body>
+    
+</html>
