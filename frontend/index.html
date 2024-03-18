@@ -2019,11 +2019,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 var url  = '';
                 if (id != null) {
-                    url = "http://127.0.0.1:5000/user/" + id;
+                    url = "https://konnect-ed.vercel.app/user/" + id;
                     isself = false;
                 } else {
                     
-                    url = "http://127.0.0.1:5000/read1";
+                    url = "https://konnect-ed.vercel.app/read1";
                 }
 
                 let response = await fetch(url, { 
