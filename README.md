@@ -1,8 +1,8 @@
 
 # KonnectED: Professional Growth and Learning Platform 🌱🚀
 
-### Check Out Our Website
-👉 [Visit KonnectED](website_link) to see our project live!
+### Check Out Our [Website](https://konnect-ed.vercel.app/)
+👉 [Visit KonnectED](https://konnect-ed.vercel.app/) to see our project live!
 
 ## 🎯 Problem Statement
 In the rapidly evolving digital landscape, traditional platforms offer fragmented solutions that either focus on networking or learning, but rarely both. Users, especially the younger generation, crave integrated experiences that offer both professional connections and educational value in a seamless, engaging format.
