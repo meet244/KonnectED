@@ -16,6 +16,7 @@ coll = db["users"]
 
 @app.route("/", methods=["GET"])
 def home():
+    #
     return "Welcome to my backend!"
 
 @app.route("/create", methods=["POST"])
