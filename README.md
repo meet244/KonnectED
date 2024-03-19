@@ -27,7 +27,7 @@ KonnectED bridges this gap by offering a unified solution that fosters professio
 We aim to further enhance KonnectED by implementing a smart recommendation engine, enabling collaborative projects, hosting interactive live events, and improving our skill endorsement system.
 
 ### About Project
-This project was developed as part of a hackathon by team [TensionFlow](https://github.com/meet244/KonnectED/graphs/contributors). You can find more information about the hackathon and our project [here](https://google.com).
+This project was developed as part of a hackathon by team [TensionFlow](https://github.com/meet244/KonnectED/graphs/contributors). You can find more information about the hackathon and our project [here](https://www.linkedin.com/posts/meet244_hackathon-learning-collaboration-activity-7175688987255128064-Vql8?utm_source=share&utm_medium=member_desktop).
 
 ## 🤝 Contributors
 - [Meet Patel](https://github.com/meet244)
