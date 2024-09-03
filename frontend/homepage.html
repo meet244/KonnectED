@@ -687,7 +687,7 @@
                                             
                                             <div class="avatar">
                                                 <a href="homepage.html?id=9b6eafab1f4f4fd0b4f7490c8bb4dd77">
-                                                    <img class="avatar-img rounded-circle" src="https://www.hagopsphotography.com/wp-content/uploads/2021/10/Female-LinkedIn-portrait.jpg" alt="" />
+                                                    <img class="avatar-img rounded-circle" src="https://images.healthshots.com/healthshots/en/uploads/2020/12/08182549/positive-person.jpg" alt="" />
                                                 </a>
                                             </div>
                                             
@@ -2008,128 +2008,153 @@ document.addEventListener('DOMContentLoaded', function() {
         var isself = true;
 
         async function fetchData() {
-            try {
+
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            var id = urlParams.get('id');
 
                 
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                const id = urlParams.get('id');
-
-                console.log(id);
-
-                var url  = '';
-                if (id != null) {
-                    url = "https://konnect-ed.vercel.app/user/" + id;
-                    isself = false;
-                } else {
-                    
-                    url = "https://konnect-ed.vercel.app/read1";
+            allData = {
+            "6e252ad765964db497826e4a3dff19f8": {
+                "name": "Jay Patel",
+                "subtitle": "Web Developer at Google",
+                "quote": "I'd love to change the world, but they won't give me the source code.",
+                "posts_count": { "$numberInt": "15" },
+                "followers_count": { "$numberInt": "124" },
+                "koins_count": { "$numberInt": "257" },
+                "about": "I am a web developer at Google. I've worked as a full stack developer for more than 5 years. I love to work on new projects and learn new things.",
+                "born": "October 20, 1990",
+                "experience": [
+                {
+                    "company": "Apple Computer, Inc.",
+                    "duration": "May 2015 – Present",
+                    "employment_duration": "8 mos"
+                },
+                {
+                    "company": "Microsoft Corporation",
+                    "duration": "May 2017 – Present",
+                    "employment_duration": "1 yrs 5 mos"
+                },
+                {
+                    "company": "Tata Consultancy Services.",
+                    "duration": "May 2022 – Present",
+                    "employment_duration": "6 yrs 10 mos"
                 }
+                ],
+                "email": "jay@gmail.com",
+                "history": [],
+                "videos": [],
+                "exp": "3+ yrs at Google",
+                "skills": ["python", "flutter"],
+                "image": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg"
+            },
+            "dbf87d73659f4b39a18d18942f3e2c1b":{"about":"I am a passionate software engineer with expertise in building scalable web applications. I enjoy solving complex problems and learning new technologies.","born":"March 10, 1993","email":"aarav.mehta@example.com","exp":"8+ years in software development","experience":[{"company":"Amazon Web Services","duration":"June 2013 – January 2017","employment_duration":"3 yrs 8 mos"},{"company":"Facebook","duration":"February 2017 – December 2019","employment_duration":"2 yrs 11 mos"},{"company":"Netflix","duration":"January 2020 – Present","employment_duration":"4 yrs 2 mos"}],"followers_count":{"$numberInt":"210"},"history":[],"image":"https://randomuser.me/api/portraits/men/32.jpg","koins_count":{"$numberInt":"150"},"name":"Aarav Mehta","posts_count":{"$numberInt":"30"},"quote":"The only way to do great work is to love what you do.","skills":["JavaScript","React.js","Node.js","MongoDB","AWS","Docker"],"subtitle":"Software Engineer","videos":[]},
 
-                let response = await fetch(url, { 
-                    method: "GET",
-                });
+            "9b6eafab1f4f4fd0b4f7490c8bb4dd77":{"about":"I am a dedicated web developer with a passion for creating user-friendly and efficient web applications. I enjoy collaborating with teams to deliver high-quality solutions.","born":"September 5, 1995","email":"aaradhya.sharma@example.com","exp":"6+ years in web development","experience":[{"company":"Accenture","duration":"July 2014 – March 2018","employment_duration":"3 yrs 9 mos"},{"company":"IBM","duration":"April 2018 – Present","employment_duration":"3 yrs 10 mos"}],"followers_count":{"$numberInt":"175"},"history":[],"image":"https://images.healthshots.com/healthshots/en/uploads/2020/12/08182549/positive-person.jpg","koins_count":{"$numberInt":"190"},"name":"Aaradhya Sharma","posts_count":{"$numberInt":"25"},"quote":"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.","skills":["HTML","CSS","JavaScript","React.js","Node.js"],"subtitle":"Web Developer","videos":[]},
 
-                if (!response.ok) {
-                    throw new Error("Failed to fetch data");
-                }
+            "b7db91b5b6db4dfaa1a65443d89049ad":{"about":"I am a detail-oriented software tester with a passion for ensuring the quality and reliability of software products. I thrive in fast-paced environments and enjoy the challenge of finding bugs.","born":"December 15, 1990","email":"aanya.verma@example.com","exp":"7+ years in software testing","experience":[{"company":"Infosys","duration":"May 2014 – July 2018","employment_duration":"4 yrs 3 mos"},{"company":"Google","duration":"August 2018 – Present","employment_duration":"3 yrs 7 mos"}],"followers_count":{"$numberInt":"132"},"history":[],"image":"https://media.licdn.com/dms/image/D5603AQHSm1PgTvzD7w/profile-displayphoto-shrink_800_800/0/1707993397922?e=2147483647&v=beta&t=HkBWrv83HPJiIqhvmQqNwkcIOsSXgMSSBu3XXbrewHM","koins_count":{"$numberInt":"215"},"name":"Aanya Verma","posts_count":{"$numberInt":"20"},"quote":"Quality is not an act, it is a habit.","skills":["Manual Testing","Automation Testing","Selenium","Jira","TestRail"],"subtitle":"Software Tester","videos":[]},
 
-                let data = await response.json(); 
+            "e451f19633bb4d5e8c44678f98e19eaf":{"about":"I am a web developer passionate about creating innovative and user-friendly web applications. I enjoy working with cutting-edge technologies and solving complex problems.","born":"February 28, 1988","email":"jeet.phuria@example.com","exp":"9+ years in web development","experience":[{"company":"Amazon","duration":"April 2013 – July 2016","employment_duration":"3 yrs 4 mos"},{"company":"Meta","duration":"August 2016 – Present","employment_duration":"5 yrs 7 mos"}],"followers_count":{"$numberInt":"305"},"history":[],"image":"https://i.pinimg.com/originals/af/9f/1f/af9f1fed99621ae20f9edd2ab6cbb8bd.jpg","koins_count":{"$numberInt":"290"},"name":"Jeet Phuria","posts_count":{"$numberInt":"40"},"quote":"The best way to predict the future is to create it.","skills":["HTML","CSS","JavaScript","React.js","Node.js","Express.js"],"subtitle":"Web Developer at Meta","videos":[]},
 
-                
-                if (!data) {
-                    throw new Error("Failed to parse response data");
-                }
-                console.log(data);
+            "e9f5879257b34f3f9b272d525b1452a7":{"about":"I am a passionate cloud engineer with a focus on designing and implementing scalable and secure cloud solutions. I enjoy working with cloud technologies to optimize performance and efficiency.","born":"November 12, 1992","email":"aarohi.nadar@example.com","exp":"8+ years in cloud engineering","experience":[{"company":"IBM","duration":"June 2015 – April 2019","employment_duration":"3 yrs 11 mos"},{"company":"Microsoft","duration":"May 2019 – Present","employment_duration":"2 yrs 10 mos"}],"followers_count":{"$numberInt":"188"},"history":[],"image":"https://marketplace.canva.com/EAFXVprh3Mk/2/0/1600w/canva-gray-and-orange-simple-linkedin-profile-picture-Fe4W5qr-zVQ.jpg","koins_count":{"$numberInt":"180"},"name":"Aarohi Nadar","posts_count":{"$numberInt":"35"},"quote":"The cloud is the ultimate equalizer. In the cloud, all companies are on a level playing field.","skills":["AWS","Azure","Google Cloud Platform","Kubernetes","Terraform","Docker"],"subtitle":"Cloud Engineer","videos":[]},
 
-                
-                document.getElementById("name").innerText = data['name'];
-                document.getElementById("subtitle").innerText = data['subtitle'];
-                document.getElementById("about").innerText = data['about'];
-                document.getElementById("email").innerText = data['email'];
-                document.getElementById("quote").innerText = data['quote'];
+            "c8ff08b8d9b34373964e19c8aaf443ee":{"about":"I am a seasoned software engineer with a strong background in full-stack web development. I am passionate about creating elegant solutions to complex problems and continuously expanding my skills.","born":"July 25, 1987","email":"samir.bhuptani@example.com","exp":"10+ years in software engineering","experience":[{"company":"Oracle Corporation","duration":"June 2010 – August 2015","employment_duration":"5 yrs 3 mos"},{"company":"Uber Technologies Inc.","duration":"September 2015 – Present","employment_duration":"6 yrs 6 mos"}],"followers_count":{"$numberInt":"420"},"history":[],"image":"https://cdn.openart.ai/stable_diffusion/20bf8d8b80ef5b05d76f4ce396d4b664467fddac_2000x2000.webp","koins_count":{"$numberInt":"380"},"name":"Samir Bhuptani","posts_count":{"$numberInt":"50"},"quote":"The only way to do great work is to love what you do.","skills":["JavaScript","React.js","Node.js","Python","Django","SQL"],"subtitle":"Software Engineer","videos":[]},
 
-                
-                let experienceList = document.getElementById("experience");
-                experienceList.innerHTML = ""; 
+            "f9a836cd0c794fe5ae3b6e5dc0a41e4b":{"about":"I am a passionate software developer with a focus on building robust and scalable applications. I enjoy exploring new technologies and solving challenging problems.","born":"April 12, 1991","email":"rishab.shetty@example.com","exp":"8+ years in software development","experience":[{"company":"Cisco Systems","duration":"May 2013 – December 2017","employment_duration":"4 yrs 8 mos"},{"company":"Adobe Inc.","duration":"January 2018 – Present","employment_duration":"4 yrs 2 mos"}],"followers_count":{"$numberInt":"280"},"history":[],"image":"https://randomuser.me/api/portraits/men/65.jpg","koins_count":{"$numberInt":"310"},"name":"Rishab Shetty","posts_count":{"$numberInt":"40"},"quote":"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.","skills":["Java","Spring Boot","Angular","MongoDB","AWS","Docker"],"subtitle":"Software Developer","videos":[]}
+        }
 
-                data['experience'].forEach((experience) => {
-                    let listItem = document.createElement("div");
-                    listItem.classList.add("d-flex");
-                    listItem.innerHTML = `
-                        <div class="avatar me-3">
-                            <a href="#!">
-                                <img class="avatar-img rounded-circle" src="assets/images/logo/08.svg" alt="" />
-                            </a>
-                        </div>
-                        <div>
-                            <h6 class="card-title mb-0">
-                                <a href="#!" style="font-size: 14px;">${experience['company']}</a>
-                            </h6>
-                            <p class="small" style="font-size: 12px;">
-                                ${experience['duration']}
-                                <a class="btn btn-primary-soft btn-xs ms-2 editclass" href="#!" id="edit1">Edit</a>
-                            </p>
-                        </div>
-                    `;
-                    experienceList.appendChild(listItem);
-                });
-
-                
-                let skillsList = document.getElementById("skills");
-                skillsList.innerHTML = ""; 
-
-
-                
-                data['skills'].forEach((skill) => {
-                    let listItem = document.createElement("div");
-                    listItem.classList.add("col-12");
-                    listItem.innerHTML = `
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-laptop me-2"></i>
-                            <span class="small">${skill}</span>
-                            <div class="ms-auto d-flex align-items-center">
-                                <button class="endorse-button btn-sm editclass" onclick="endorse(this)">Endorse</button>
-                                <span class="endorse-count small" id="${skill.toLowerCase()}-count"> 0</span>
-                            </div>
-                        </div>
-                    `;
-                    skillsList.appendChild(listItem);
-
-                
-                document.getElementById("image").src = data['image'];
-                document.getElementById("image2").src = data['image'];
-                
-                });
-
-
-
-                
-                if (isself) {
-                    document.getElementById("edit").style.display = "block";
-                    document.getElementById("edit2").style.display = "block";
-                    let editElements = document.getElementsByClassName("editclass");
-                    for (let i = 0; i < editElements.length; i++) {
-                        editElements[i].style.display = "none";
-                    }
-                    document.getElementById("edit3").innerText = "🕜 History";
-                    
-                } else {
-                    document.getElementById("edit").style.display = "none";
-                    document.getElementById("edit2").style.display = "none";
-                    let editElements = document.getElementsByClassName("editclass");
-                    for (let i = 0; i < editElements.length; i++) {
-                        editElements[i].style.display = "block";
-                    }
-                    document.getElementById("edit3").innerText = " Suggested";
-                }
-
-
-
-
-            } catch (error) {
-                console.error(error);
+            if (id != null) {
+                isself = false;
+            } else {
+                id = "6e252ad765964db497826e4a3dff19f8";
             }
+
+            data = allData[id];
+
+            // console.log(data);
+
+            
+            document.getElementById("name").innerText = data['name'];
+            document.getElementById("subtitle").innerText = data['subtitle'];
+            document.getElementById("about").innerText = data['about'];
+            document.getElementById("email").innerText = data['email'];
+            document.getElementById("quote").innerText = data['quote'];
+
+            
+            let experienceList = document.getElementById("experience");
+            experienceList.innerHTML = ""; 
+
+            data['experience'].forEach((experience) => {
+                let listItem = document.createElement("div");
+                listItem.classList.add("d-flex");
+                listItem.innerHTML = `
+                    <div class="avatar me-3">
+                        <a href="#!">
+                            <img class="avatar-img rounded-circle" src="assets/images/logo/08.svg" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <h6 class="card-title mb-0">
+                            <a href="#!" style="font-size: 14px;">${experience['company']}</a>
+                        </h6>
+                        <p class="small" style="font-size: 12px;">
+                            ${experience['duration']}
+                            <a class="btn btn-primary-soft btn-xs ms-2 editclass" href="#!" id="edit1">Edit</a>
+                        </p>
+                    </div>
+                `;
+                experienceList.appendChild(listItem);
+            });
+
+            
+            let skillsList = document.getElementById("skills");
+            skillsList.innerHTML = ""; 
+
+
+            
+            data['skills'].forEach((skill) => {
+                let listItem = document.createElement("div");
+                listItem.classList.add("col-12");
+                listItem.innerHTML = `
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-laptop me-2"></i>
+                        <span class="small">${skill}</span>
+                        <div class="ms-auto d-flex align-items-center">
+                            <button class="endorse-button btn-sm editclass" onclick="endorse(this)">Endorse</button>
+                            <span class="endorse-count small" id="${skill.toLowerCase()}-count"> 0</span>
+                        </div>
+                    </div>
+                `;
+                skillsList.appendChild(listItem);
+
+            console.log(data['image']);
+            document.getElementById("image").src = data['image'];
+            document.getElementById("image2").src = data['image'];
+            
+            });
+
+
+
+            
+            if (isself) {
+                document.getElementById("edit").style.display = "block";
+                document.getElementById("edit2").style.display = "block";
+                let editElements = document.getElementsByClassName("editclass");
+                for (let i = 0; i < editElements.length; i++) {
+                    editElements[i].style.display = "none";
+                }
+                document.getElementById("edit3").innerText = "🕜 History";
+                
+            } else {
+                document.getElementById("edit").style.display = "none";
+                document.getElementById("edit2").style.display = "none";
+                let editElements = document.getElementsByClassName("editclass");
+                for (let i = 0; i < editElements.length; i++) {
+                    editElements[i].style.display = "block";
+                }
+                document.getElementById("edit3").innerText = " Suggested";
+            }
+
         }
 
         fetchData();
